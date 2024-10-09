@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ShopSizzle</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> -->
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="search.js"></script>
+  </head>
+  <section id="header">
+    <a href="index.html"
+      ><img
+        src="img/shop sizzle-logos (1)/shop sizzle-logos_white.png"
+        class="logo" />ShopSizzle</a
+    >
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+        </li>
+        <li>
+          <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="login-details" class="section-p1">
+    <form name="fname" id="loginForm" onsubmit="return all_field()">
+      <h2>Create an Account</h2>
+      <p>Already have an account? <a href="signin.html">Login</a></p>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Name" name="name" />
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Email" name="email" />
+      <label for="number">Phone Number</label>
+      <input type="text" id="number" name="number" placeholder="Phone Number" />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password" />
+      <label for="cpassword">Confirm Password</label>
+      <input
+        type="password"
+        id="cpassword"
+        name="cpassword"
+        placeholder="Confirm Password"
+        onblur="return matchpass()" />
+      <div id="error"></div>
+      <p>
+        By creating an account you agree to our
+        <a href="#">Terms & Conditions</a>
+      </p>
+      <button class="normal" type="submit" value="submit">
+        Create Account
+      </button>
+    </form>
+    <img src="img/banner21.png" />
+  </section>
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>
+        Get E-mail updates about our latest shop and
+        <span>special offers.</span>
+      </p>
+    </div>
+    <div class="form">
+      <input type="email" placeholder="Your email address" />
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+  <footer class="footer1">
+    <div class="footerLeft">
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">About Us</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Company
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Contact
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Careers
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Affiliates
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Stores
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">My Account</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='signin.html'">
+            Sign In
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            View Cart
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            My Wishlist
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            Track My Order
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Help
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Useful Links</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Support
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Refund
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            FAQ
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Feedback
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Stories
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Products</h1>
+        <ul class="fList">
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweatshirts'">
+            Sweatshirts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#jackets'">
+            Zipper Jackets
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweaters'">
+            Sweaters
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#suits'">
+            Suits
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#blazers'">
+            Blazers
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#shorts'">
+            Shorts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#tshirts'">
+            Tshirts
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerRight">
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Follow Us</h1>
+        <div class="ficons">
+          <i class="fa-brands fa-facebook-f ficon"></i>
+          <i class="fa-brands fa-instagram ficon"></i>
+          <i class="fa-brands fa-x-twitter ficon"></i>
+          <i class="fa-brands fa-youtube ficon"></i>
+          <i class="fa-brands fa-whatsapp ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Contact Us</h1>
+        <div class="ficons">
+          <i class="fa-duotone fa-phone ficon"></i>
+          <i class="fa-sharp fa-solid fa-envelope ficon"></i>
+          <i class="fa-sharp fa-solid fa-location-dot ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <span class="copyright">
+          <span>©</span>
+          <span>2024 Shop Sizzle India Marketing Pvt. Ltd</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let emailErrorShown = false;
+    let numberErrorShown = false;
+    let fieldfillErrorShown = false;
+
+    function all_field() {
+      let n = document.forms["fname"]["name"].value.trim();
+      let e = document.forms["fname"]["email"].value.trim();
+      let no = document.forms["fname"]["number"].value.trim();
+      let p = document.forms["fname"]["password"].value.trim();
+      let c = document.forms["fname"]["cpassword"].value.trim();
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[789]\d{9}$/;
+
+      if (n === "" || e === "" || no === "" || p === "" || c === "") {
+        if (!fieldfillErrorShown) {
+          alert("All fields must be filled out");
+          fieldfillErrorShown = true;
+        }
+        return false;
+      } else {
+        fieldfillErrorShown = false;
+      }
+
+      if (!emailRegex.test(e)) {
+        if (!emailErrorShown) {
+          alert("Please enter a valid email address");
+          emailErrorShown = true;
+        }
+        return false;
+      }
+
+      if (!phoneRegex.test(no)) {
+        if (!numberErrorShown) {
+          alert("Please enter a valid 10-digit phone number");
+          numberErrorShown = true;
+        }
+        return false;
+      }
+
+      return true;
+    }
+
+    function matchpass() {
+      let p = document.getElementById("password").value.trim();
+      let c = document.getElementById("cpassword").value.trim();
+      if (p !== c) {
+        document.getElementById("password").style.color = "red";
+        document.getElementById("cpassword").style.color = "red";
+        document.getElementById("password").style.borderColor = "red";
+        document.getElementById("cpassword").style.borderColor = "red";
+        document.getElementById("error").innerHTML = "Passwords do NOT match!";
+        document.getElementById("error").style.color = "red";
+        return false;
+      } else {
+        document.getElementById("password").style.color = "";
+        document.getElementById("cpassword").style.color = "";
+        document.getElementById("password").style.borderColor = "";
+        document.getElementById("cpassword").style.borderColor = "";
+        document.getElementById("error").innerHTML = "";
+        return true;
+      }
+    }
+
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function (e) {
+      emailErrorShown = false;
+      numberErrorShown = false;
+      fieldfillErrorShown = false;
+
+      e.preventDefault();
+
+      if (!matchpass() || !all_field()) {
+        return false;
+      }
+
+      const nameInput = loginForm.elements["name"];
+      const emailInput = loginForm.elements["email"];
+      const numberInput = loginForm.elements["number"];
+      const passwordInput = loginForm.elements["password"];
+      const loggedIn = localStorage.getItem("loggedIn");
+
+      let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+
+      const addAccount = (name, email, number, password) => {
+        const newAccount = { name, email, number, password };
+        accounts.push(newAccount);
+        localStorage.setItem("accounts", JSON.stringify(accounts));
+        return newAccount;
+      };
+
+      const emailExists = (email) => {
+        return accounts.some((account) => account.email === email);
+      };
+
+      if (emailExists(emailInput.value.trim())) {
+        alert(
+          "An account with this email already exists. Please use a different email address."
+        );
+
+        return;
+      }
+
+      const newAccount = addAccount(
+        nameInput.value.trim(),
+        emailInput.value.trim(),
+        numberInput.value.trim(),
+        passwordInput.value.trim()
+      );
+      window.location.href = "signin.html";
+      alert("Account Created Successfully");
+      loginForm.reset();
+    });
+  </script>
+  <script src="script.js"></script>
+</html>

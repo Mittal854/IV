@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakfast</title>
+  <script src="javascript.js" defer></script>
+  <script src="search.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <section id="header">
+
+    <a href="HomePage.html"><img src="images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="Blog.html">Contact Us</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+<section id="intro">
+  <h2>Breakfast</h2>
+  <p>From classic dishes like Paranthas and Dosas to more unique offerings like eggs and smoothies, these breakfast dishes are sure to start your day off right.</p>
+</section>
+
+<section id="start">
+  <div class="cat2" style="margin: 20px 40px;">
+    <div class="hold4">
+      <a href="BreakCat/BananaSmootie.html"><img src="images1/Banana.webp"></a>
+      <br>
+      <a href="BreakCat/BananaSmootie.html">Banana Smoothie</a>
+    </div>
+
+    <div class="hold4">
+      <a href="BreakCat/AlooParantha.html"><img src="images1/Aloo_Parantha.jpg"></a>
+      <br>
+      <a href="BreakCat/AlooParantha.html">Aloo Paratha</a>
+    </div>
+
+    <div class="hold4">
+      <a href="BreakCat/BreadPakora.html"><img src="images1/BreadPakora.cms"></a>
+      <br>
+      <a href="BreakCat/BreadPakora.html">Bread Pakora</a>
+    </div>
+
+    <div class="hold4">
+      <a href="BreakCat/Omlette.html"><img src="images1/Omlette.jpg"></a>
+      <br>
+      <a href="BreakCat/Omlette.html">Omlette</a>
+    </div>
+
+    <div class="hold4">
+      <a href="BreakCat/Pancakes.html"><img src="images1/Pancakes.jpg"></a>
+      <br>
+      <a href="BreakCat/Pancakes.html">Fluffy Pancakes</a>
+    </div>
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/MasalaOats.html"><img src="images1/MasalaOats.jpg"></a>
+      <br>
+      <a href="BreakCat/MasalaOats.html">Masala Oats</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/Idli.html"><img src="images1/Idli.jpg"></a>
+      <br>
+      <a href="BreakCat/Idli.html">Idli Sambar</a>
+    </div> -->
+
+    <div class="hold4">
+      <a href="BreakCat/FrenchToast.html"><img src="images1/FrenchToast.jpg"></a>
+      <br>
+      <a href="BreakCat/FrenchToast.html">French Toast</a>
+    </div>
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/RavaUttapam.html"><img src="images1/RavaUttapam.jpg"></a>
+      <br>
+      <a href="BreakCat/RavaUttapam.html">Rava Uttapam</a>
+    </div> -->
+
+      <!-- <div class="hold4">
+        <a href="BreakCat/Poha.html"><img src="images1/Poha.jpg"></a>
+        <br>
+        <a href="BreakCat/Poha.html">Poha</a>
+      </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/DalParantha.html"><img src="images1/DalParatha.jpg"></a>
+      <br>
+      <a href="BreakCat/DalParantha.html">Dal Paratha</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/PooriAloo.html"><img src="images1/PooriAloo.jpg"></a>
+      <br>
+      <a href="BreakCat/PooriAloo.html">Puri Aloo</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/SmoothieBowl.html"><img src="images1/SmoothieBowl.jpg"></a>
+      <br>
+      <a href="BreakCat/SmoothieBowl.html">Smoothie Bowl</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/Waffles.html"><img src="images1/Waffles.jpg"></a>
+      <br>
+      <a href="BreakCat/Waffles.html">Waffles</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/GrilledSandwich.html"><img src="images1/GrilledSandwich.webp"></a>
+      <br>
+      <a href="BreakCat/GrilledSandwich.html">Grilled Sandwich</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/Upma.html"><img src="images1/Upma.jpg"></a>
+      <br>
+      <a href="BreakCat/Upma.html">Upma</a>
+    </div> -->
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/Chila.html"><img src="images1/Chila.jpg"></a>
+      <br>
+      <a href="BreakCat/Chila.html">Moong Dal Chila</a>
+    </div> -->
+
+    <div class="hold4">
+      <a href="BreakCat/PaneerParatha.html"><img src="images1/PaneerParatha.jpg"></a>
+      <br>
+      <a href="BreakCat/PaneerParatha.html">Paneer Paratha</a>
+    </div>
+
+    <!-- <div class="hold4">
+      <a href="BreakCat/PavBhaji.html"><img src="images1/PavBhaji.jpg"></a>
+      <br>
+      <a href="BreakCat/PavBhaji.html">Pav Bhaji</a>
+    </div> -->
+
+    <div class="hold4">
+      <a href="BreakCat/EggSand.html"><img src="images1/EggSand.jpg"></a>
+      <br>
+      <a href="BreakCat/EggSand.html">Boiled Egg Sandwich</a>
+    </div>
+  </div>
+</section>
+
+<section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="HomePage.html"><img src="images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless classics to modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own creations and create personalised digital cookbooks all on myfoodbook. <a href="AboutUs.html" class="af">Learn more about what makes us different from other recipe sites.</a> To start your search, check out some <a href="Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 30px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

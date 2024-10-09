@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<p id="js"><p>
+<script>
+const aaa = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const bbb = aaa.slice(1);
+document.getElementById("js").innerHTML=bbb;
+</script>
+<!-- 
+->toString():-The JavaScript method toString() converts an array to a string of 
+(comma separated) array values.
+->join():-method also joins all array elements into a string.
+->pop():-The pop() method removes the last element from an array
+->push():-The push() method adds a new element to an array (at the end):(argrument must)
+->shift():-method removes the first array element and "shifts" all other elements 
+to a lower index.
+->unshift():-adds a new element to an array (at the beginning), and "unshifts" older 
+elements:
+-> changing elements :- a[a.length] = "Kiwi";
+-> delete():- Array elements can be deleted using the JavaScript operator delete.
+Using delete leaves undefined holes in the array.:- delete a[0];
+->Concatenating Arrays:- creates a new array by merging (concatenating) existing arrays.
+The concat() method does not change the existing arrays. It always returns a new array.
+c=a.concat(b); -> a.concat(b,d) -> a.concat("hello")
+->Flattening an array is the process of reducing the dimensionality of an array.
+The flat() method creates a new array with sub-array elements concatenated to a specified depth. -->
+<script>
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+document.getElementById("demo").innerHTML = newArr;
+</script>
+<!-- ->a.reverse();
+->splice():-method can be used to add new items to an array:
+ex:- a.splice(2, 0, "python", "Java");
+->The first parameter (2) defines the position where new elements should be added (spliced in).
+->The second parameter (0) defines how many elements should be removed.
+ex:- a.splice(0, 1);
+
+->The slice() method slices out a piece of an array into a new array.
+ex:- 
+const aaa = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const bbb = aaa.slice(1); -->
+</body>
+</html>

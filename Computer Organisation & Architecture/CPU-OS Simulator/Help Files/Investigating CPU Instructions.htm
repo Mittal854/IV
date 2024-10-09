@@ -1,0 +1,1600 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Investigating%20CPU%20Instructions_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="Investigating%20CPU%20Instructions_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>1</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mustafab</o:Author>
+  <o:LastAuthor>Besim</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>353</o:TotalTime>
+  <o:LastPrinted>2007-01-26T07:17:00Z</o:LastPrinted>
+  <o:Created>2011-09-08T21:17:00Z</o:Created>
+  <o:LastSaved>2011-09-08T21:17:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>985</o:Words>
+  <o:Characters>5617</o:Characters>
+  <o:Company>EdgeHill</o:Company>
+  <o:Lines>46</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>6589</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-fareast-language:EN-US;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+p.TtlChapter1, li.TtlChapter1, div.TtlChapter1
+	{mso-style-name:"Ttl Chapter 1";
+	mso-style-next:Normal;
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	line-height:36.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:36.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.TtlBlockLabel, li.TtlBlockLabel, div.TtlBlockLabel
+	{mso-style-name:"Ttl Block Label";
+	mso-style-next:Para;
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.TtlOverviewMap, li.TtlOverviewMap, div.TtlOverviewMap
+	{mso-style-name:"Ttl Overview Map";
+	mso-style-next:"Ttl Block Label";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:16.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	border:none;
+	mso-border-top-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:3.0pt 0cm 0cm 0cm;
+	font-size:15.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Para, li.Para, div.Para
+	{mso-style-name:Para;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:72.0pt;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("Investigating%20CPU%20Instructions_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("Investigating%20CPU%20Instructions_files/header.htm") fcs;
+	mso-endnote-separator:url("Investigating%20CPU%20Instructions_files/header.htm") es;
+	mso-endnote-continuation-separator:url("Investigating%20CPU%20Instructions_files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 2.0cm 72.0pt 70.9pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-footer:url("Investigating%20CPU%20Instructions_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:128404897;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453929090 67698705 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:151529144;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1083880304 555512456 134807555 134807557 134807553 134807555 134807557 134807553 134807555 134807557;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;
+	color:windowtext;}
+@list l2
+	{mso-list-id:182715194;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-886781898 67698705 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:313219222;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2144030158 -682042710 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-start-at:9;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l4
+	{mso-list-id:438262139;
+	mso-list-type:hybrid;
+	mso-list-template-ids:108954236 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:451479974;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 56377184 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:522785912;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 56377184 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7
+	{mso-list-id:543564316;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1795414924 134807567 134807577 134807579 134807567 134807577 134807579 134807567 134807577 134807579;}
+@list l7:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:603807972;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1573241722 67698693 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l8:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l8:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:746725854;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:872108931;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1939805250 67698689 -1747706420 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:949050569;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l11:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:972102497;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1066301308 555512456 134807555 134807557 134807553 134807555 134807557 134807553 134807555 134807557;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;
+	color:windowtext;}
+@list l13
+	{mso-list-id:1000354806;
+	mso-list-type:hybrid;
+	mso-list-template-ids:734142780 67698705 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14
+	{mso-list-id:1040324800;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1527303884 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l15
+	{mso-list-id:1079249260;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l16
+	{mso-list-id:1083919045;
+	mso-list-type:hybrid;
+	mso-list-template-ids:907967460 362718256 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l16:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l17
+	{mso-list-id:1088426668;
+	mso-list-type:hybrid;
+	mso-list-template-ids:276219482 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l18
+	{mso-list-id:1144541872;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453929090 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l19
+	{mso-list-id:1261989778;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1973949496 -1277001244 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l19:level1
+	{mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;}
+@list l20
+	{mso-list-id:1276252383;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1181182992 2053908658 -278389798 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l20:level1
+	{mso-level-tab-stop:45.0pt;
+	mso-level-number-position:left;
+	margin-left:45.0pt;
+	text-indent:-18.0pt;}
+@list l20:level2
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:99.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l20:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:117.0pt;
+	mso-level-number-position:right;
+	margin-left:117.0pt;
+	text-indent:-9.0pt;}
+@list l21
+	{mso-list-id:1302272040;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-175729160 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l22
+	{mso-list-id:1356809977;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l23
+	{mso-list-id:1422217352;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698705 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l23:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l23:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24
+	{mso-list-id:1481648804;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1748540308 411748152 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l24:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-36.0pt;}
+@list l25
+	{mso-list-id:1622758046;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2137929256 67698695 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l25:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F071;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:8.0pt;
+	font-family:Wingdings;}
+@list l26
+	{mso-list-id:1698193939;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1786020144 67698703 -1936187288 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l26:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l26:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27
+	{mso-list-id:1768965247;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-259753794 134807557 134807555 134807557 134807553 134807555 134807557 134807553 134807555 134807557;}
+@list l27:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l27:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l27:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l28
+	{mso-list-id:1794859033;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1924935624 582655652 67698689 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l28:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l28:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l29
+	{mso-list-id:1872255095;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453929090 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l29:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l30
+	{mso-list-id:1878739283;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l30:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l30:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l31
+	{mso-list-id:1939410106;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-69802514 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l31:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l32
+	{mso-list-id:1986855431;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-569328130 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l32:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l33
+	{mso-list-id:2035229920;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l33:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l33:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l34
+	{mso-list-id:2067601805;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-971339838 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l34:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l35
+	{mso-list-id:2071029907;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2023293978 240003608 1835720426 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l35:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l35:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l36
+	{mso-list-id:2097944661;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 56377184 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l36:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l36:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l37
+	{mso-list-id:2111470124;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2118028850 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l37:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <o:colormru v:ext="edit" colors="#eaeaea"/>
+  <o:colormenu v:ext="edit" fillcolor="#eaeaea" strokecolor="none"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border:none;border-bottom:solid windowtext 1.0pt;
+mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<p class=TtlChapter1 align=center style='margin-top:0cm;text-align:center;
+line-height:normal;border:none;mso-border-bottom-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm'><span style='font-size:28.0pt;
+font-family:Calibri'>Investigating CPU Instructions<o:p></o:p></span></p>
+
+</div>
+
+<p class=TtlBlockLabel><span style='font-size:16.0pt;font-family:Calibri'>Objectives
+of this tutorial<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>At
+the end of this lab you should be able to:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Enter CPU
+instructions using the CPU simulator<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Describe the effect
+of compare instruction on CPU status flags Z and N<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Construct a
+loop and explain jump instructions that use Z and N flags<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Use direct
+addressing to access memory location(s)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Use indirect
+direct addressing to access memory location(s)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Construct a
+subroutine and call it<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo38;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Wingdings;
+mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:Calibri'>Pass
+parameter(s) to the subroutine<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<div style='mso-element:para-border-div;border:none;border-top:solid windowtext 1.0pt;
+mso-border-top-alt:solid windowtext .75pt;padding:3.0pt 0cm 0cm 0cm'>
+
+<p class=TtlOverviewMap><span style='font-size:16.0pt;font-family:Calibri'>Exercises<o:p></o:p></span></p>
+
+</div>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'>Learning objectives: To enter CPU instructions and describe effect of
+compare instruction on CPU status flags Z and N.<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.9pt;margin-left:5.4pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:20.4pt'>
+  <td width=255 valign=bottom style='width:191.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In theory<o:p></o:p></span></b></p>
+  </td>
+  <td width=378 valign=bottom style='width:10.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In practice<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:262.2pt'>
+  <td width=255 valign=top style='width:191.4pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;background:#F3F3F3;padding:0cm 5.4pt 0cm 5.4pt;
+  height:262.2pt'>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>The
+  CPU instruction sets are often grouped together into categories containing
+  instructions with related functions.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>This
+  exercise familiarises you with the way the instructions are entered using the
+  simulator.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>The
+  most encountered instructions involve data movements, e.g. the <b>MOV</b> instruction.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>Another
+  common instruction is the comparison instruction, e.g. <b>CMP</b>. This
+  instruction sets or resets the status flags <b>Z</b> and <b>N</b> as a record
+  of the result of the comparison operation.<o:p></o:p></span></p>
+  </td>
+  <td width=378 valign=top style='width:10.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 7.1pt;
+  height:262.2pt'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>1.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Enter the following code and run it:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>MOV #1, R01<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>MOV #2, R02<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>ADD R01, R02<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span lang=PT style='font-size:10.0pt;font-family:Arial;
+  mso-ansi-language:PT'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>2.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Add the following code and note
+  the states of the status flags Z and N after each compare instruction is
+  executed:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>CMP #3, R02<span style='mso-spacerun:yes'>              </span></span></b><span
+  lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:PT'>Z<span
+  style='mso-spacerun:yes'>  </span></span><span style='font-size:14.0pt;
+  font-family:Symbol;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>ÿ</span></span><span
+  lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:PT'><span
+  style='mso-spacerun:yes'>       </span>N<span style='mso-spacerun:yes'> 
+  </span></span><span style='font-size:14.0pt;font-family:Symbol;mso-ascii-font-family:
+  Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;mso-char-type:
+  symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+  mso-symbol-font-family:Symbol'>ÿ</span></span><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'><o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>CMP #1, R02<span style='mso-spacerun:yes'>              </span></span></b><span
+  lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:PT'>Z<span
+  style='mso-spacerun:yes'>  </span></span><span style='font-size:14.0pt;
+  font-family:Symbol;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>ÿ</span></span><span
+  lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:PT'><span
+  style='mso-spacerun:yes'>       </span>N<span style='mso-spacerun:yes'> 
+  </span></span><span style='font-size:14.0pt;font-family:Symbol;mso-ascii-font-family:
+  Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;mso-char-type:
+  symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+  mso-symbol-font-family:Symbol'>ÿ</span></span><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'><o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>CMP #4, R02<span
+  style='mso-spacerun:yes'>              </span></span></b><span
+  style='font-size:10.0pt;font-family:Arial'>Z<span style='mso-spacerun:yes'> 
+  </span></span><span style='font-size:14.0pt;font-family:Symbol;mso-ascii-font-family:
+  Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;mso-char-type:
+  symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:symbol;
+  mso-symbol-font-family:Symbol'>ÿ</span></span><span style='font-size:10.0pt;
+  font-family:Arial'><span style='mso-spacerun:yes'>       </span>N<span
+  style='mso-spacerun:yes'>  </span></span><span style='font-size:14.0pt;
+  font-family:Symbol;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>ÿ</span></span><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'><o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=Para style='margin-left:18.0pt'><span style='font-family:Calibri'>Explain
+  your observations of the states of the status flags after the compare
+  instructions above:<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'>** Now save the above code! **<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:12.0pt;font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA;mso-bidi-font-weight:bold'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'>Learning objectives: <span style='mso-spacerun:yes'> </span>To construct
+a loop and explain jump instructions that use Z and N flags<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.9pt;margin-left:5.4pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:20.4pt'>
+  <td width=255 valign=bottom style='width:191.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In theory<o:p></o:p></span></b></p>
+  </td>
+  <td width=378 valign=bottom style='width:10.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In practice<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:264.15pt'>
+  <td width=255 valign=top style='width:191.4pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;background:#F3F3F3;padding:0cm 5.4pt 0cm 5.4pt;
+  height:264.15pt'>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>The
+  computer programs often contain loops where the same sequence of code is
+  repeatedly executed until or while certain condition is met. Loops (or
+  iterative statements) are the most useful features of programming languages.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>At
+  the instruction level, loops use conditional jump instructions to jump back
+  to the start of the loop or to jump out of the loop.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>This
+  exercise is created to demonstrate the use of the jump instruction which
+  often uses the result of a compare instruction. Such jump instructions use
+  the <b>Z</b> and the <b>N</b> status flags to jump or not jump.<o:p></o:p></span></p>
+  </td>
+  <td width=378 valign=top style='width:10.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 7.1pt;
+  height:264.15pt'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>3.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Add the following code and run it
+  (<u>ask your tutor how to enter a label</u>):<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>MOV #0, R01<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>Label1<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>ADD #1, R01<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>CMP #3, R01<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>JLT $Label1<o:p></o:p></span></b></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Summarize what the above code is doing in plain English:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>4.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Modify the above code such that
+  R01 is incremented by 1 until it reaches the value of 4. Copy the code below:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'>** Now save the above code! **</span></b><span style='font-size:10.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'>Learning objectives: <span style='mso-spacerun:yes'> </span>To use direct
+addressing to access memory location(s)<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.9pt;margin-left:5.4pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:20.4pt'>
+  <td width=255 valign=bottom style='width:191.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In theory<o:p></o:p></span></b></p>
+  </td>
+  <td width=378 valign=bottom style='width:10.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In practice<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:253.75pt'>
+  <td width=255 valign=top style='width:191.4pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;background:#F3F3F3;padding:0cm 5.4pt 0cm 5.4pt;
+  height:253.75pt'>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>Although
+  instructions moving data to or from registers are the fastest instructions,
+  it is still necessary to move data in or out of the main memory (RAM) which
+  is a much slower process.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>Examples
+  of instructions used to store into or get data out of memory are explored
+  here. The method used here uses the <u>direct addressing</u> method, i.e. the
+  memory address is directly specified in the instruction itself.<o:p></o:p></span></p>
+  </td>
+  <td width=378 valign=top style='width:10.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 7.1pt;
+  height:253.75pt'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>5.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Add the following code and run:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>STB #h41, 16<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>LDB 16, R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>ADD #1, R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>STB R03, 17</span></b><span
+  style='font-size:10.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Make a note of what you see in the program’s data area:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>What is the significance of <b style='mso-bidi-font-weight:
+  normal'>h</b> in <b style='mso-bidi-font-weight:normal'>h41</b> above?<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Modify the above code to store the next two characters in
+  the alphabet. Write down the modified code below:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='margin-left:18.0pt;text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'>** Now save the above code! **</span></b><span style='font-size:10.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'>Learning objective: To use indirect addressing to access memory location(s)<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.9pt;margin-left:5.4pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:20.4pt'>
+  <td width=255 valign=bottom style='width:191.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In theory<o:p></o:p></span></b></p>
+  </td>
+  <td width=378 valign=bottom style='width:10.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In practice<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:264.15pt'>
+  <td width=255 valign=top style='width:191.4pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;background:#F3F3F3;padding:0cm 5.4pt 0cm 5.4pt;
+  height:264.15pt'>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>There
+  are circumstances which make direct addressing unsuitable and inflexible
+  method to use.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>In
+  these cases <u>indirect addressing</u> is a more suitable and flexible method
+  to use. In indirect addressing, the address of the memory location is not
+  directly included in the instruction but is stored in a register which is the
+  used in the instruction.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>This
+  exercise introduces an indirect method of accessing memory. This is called
+  register indirect addressing. There is also the memory indirect addressing
+  but this is left as an exercise for you.<o:p></o:p></span></p>
+  </td>
+  <td width=378 valign=top style='width:10.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 7.1pt;
+  height:264.15pt'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>6.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Add the following code and run:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>Label2<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>MOV #16, R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>MOV #h41, R04<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>Label3<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>STB R04, @R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>ADD #1, R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>ADD #1, R04<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>CMP #h4F, R04<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>JNE $Label3</span></b><span lang=PT style='font-size:10.0pt;font-family:
+  Arial;mso-ansi-language:PT'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span lang=PT style='font-size:
+  10.0pt;font-family:Arial;mso-ansi-language:PT'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Make a note of what you see in the program’s data area:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Explain the significance of <b style='mso-bidi-font-weight:
+  normal'>@</b> in <b style='mso-bidi-font-weight:normal'>@R03</b> above:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='margin-left:18.0pt;text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'>** Now save the above code! **</span></b><span style='font-size:10.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Para style='margin-left:0cm'><o:p>&nbsp;</o:p></p>
+
+<b style='mso-bidi-font-weight:normal'><span style='font-size:15.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span></b>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'>Learning objective: To construct a subroutine and call it<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.9pt;margin-left:5.4pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:20.4pt'>
+  <td width=255 valign=bottom style='width:191.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In theory<o:p></o:p></span></b></p>
+  </td>
+  <td width=378 valign=bottom style='width:10.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In practice<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:253.75pt'>
+  <td width=255 valign=top style='width:191.4pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;background:#F3F3F3;padding:0cm 5.4pt 0cm 5.4pt;
+  height:253.75pt'>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>Another
+  very useful feature of programming languages is subroutines. These contain sequences
+  of instructions which can be executed many times. If a subroutine was not
+  available the same sequence of instructions would have been repeated many
+  times increasing the code size.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>At
+  instruction level, a subroutine is called by an instruction such as <st1:State
+  w:st="on"><st1:place w:st="on"><b>CAL</b></st1:place></st1:State>. This
+  effectively is a jump instruction but it also saves the address of the next
+  instruction. This is later used by a subroutine return instruction, e.g. <b>RET</b>
+  to return to the previous sequence of instructions.<o:p></o:p></span></p>
+  </td>
+  <td width=378 valign=top style='width:10.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 7.1pt;
+  height:253.75pt'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>7.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Add the following code but do <b
+  style='mso-bidi-font-weight:normal'>NOT</b> run it yet:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>MSF<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><st1:State w:st="on"><st1:place
+   w:st="on"><b style='mso-bidi-font-weight:normal'><span style='font-size:
+    10.0pt;font-family:Arial'>CAL</span></b></st1:place></st1:State><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'> $Label2</span></b><span style='font-size:10.0pt;font-family:Arial'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Now convert the code in (6) above into a subroutine by
+  inserting a <b style='mso-bidi-font-weight:normal'>RET</b> as the last
+  instruction in the subroutine. <o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Make a note of the contents of the <b style='mso-bidi-font-weight:
+  normal'>PROGRAM STACK</b> after the instruction <b style='mso-bidi-font-weight:
+  normal'>MSF</b> is executed (<u>see tutor what to do to facilitate this
+  observation</u>):<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Make a note of the contents of the <b style='mso-bidi-font-weight:
+  normal'>PROGRAM STACK</b> after the instruction <st1:State w:st="on"><st1:place
+   w:st="on"><b style='mso-bidi-font-weight:normal'>CAL</b></st1:place></st1:State>
+  is executed:<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>What is the significance of the additional information?<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'>** Now save the above code! **</span></b><span style='font-size:10.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=TtlOverviewMap style='border:none;mso-padding-alt:0cm 0cm 0cm 0cm'><span
+style='font-size:12.0pt;font-family:Calibri;font-weight:normal;mso-bidi-font-weight:
+bold'>Learning objective: <span style='mso-spacerun:yes'> </span>To pass
+parameter(s) to the subroutine<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.9pt;margin-left:5.4pt;border-collapse:collapse;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+ .5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:20.4pt'>
+  <td width=217 valign=bottom style='width:163.05pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In theory<o:p></o:p></span></b></p>
+  </td>
+  <td width=416 valign=bottom style='width:11.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#E0E0E0;padding:0cm 5.4pt 0cm 5.4pt;
+  height:20.4pt'>
+  <p class=Para style='margin-left:0cm'><b><span style='font-size:14.0pt;
+  font-family:Calibri'>In practice<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:307.5pt'>
+  <td width=217 valign=top style='width:163.05pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;background:
+  #F3F3F3;padding:0cm 5.4pt 0cm 5.4pt;height:307.5pt'>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>Useful
+  as they are the subroutines are not very flexible without the use of the
+  subroutine parameters. These are values passed to the subroutine to be
+  consumed inside the subroutine.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>The
+  common method of passing parameters to the subroutines is using the program
+  stack. The parameters are pushed on the stack before the call instruction.
+  These are then popped off the stack inside the subroutine and consumed.<o:p></o:p></span></p>
+  <p class=Para style='margin-left:0cm'><span style='font-family:Calibri'>This
+  exercise is created to demonstrate this mechanism.<o:p></o:p></span></p>
+  </td>
+  <td width=416 valign=top style='width:11.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 7.1pt;
+  height:307.5pt'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+  l7 level1 lfo37'><![if !supportLists]><span style='font-size:10.0pt;
+  font-family:Arial;mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>8.<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+  style='font-size:10.0pt;font-family:Arial'>Let’s make the above subroutine a
+  little more flexible. Suppose we wish to change the number of characters
+  stored when calling the subroutine. Modify the calling code in (7) as below:<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>MSF<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>PSH #h60<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><st1:place w:st="on"><st1:State
+   w:st="on"><b style='mso-bidi-font-weight:normal'><span style='font-size:
+    10.0pt;font-family:Arial'>CAL</span></b></st1:State></st1:place><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'> $Label2<o:p></o:p></span></b></p>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+  style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Now modify the subroutine code in (6) as below and run the
+  above calling code:<o:p></o:p></span></p>
+  <p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+   coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+   <v:stroke joinstyle="miter"/>
+   <v:path gradientshapeok="t" o:connecttype="rect"/>
+  </v:shapetype><v:shape id="_x0000_s1084" type="#_x0000_t202" style='position:absolute;
+   margin-left:108.75pt;margin-top:.15pt;width:190.5pt;height:144.75pt;
+   z-index:1'/><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+  position:relative;z-index:1'><span style='position:absolute;left:144px;
+  top:-1px;width:260px;height:199px'>
+  <table cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=260 height=199 bgcolor=white style='border:.75pt solid black;
+    vertical-align:top;background:white'><![endif]><![if !mso]><span
+    style='position:absolute;mso-ignore:vglayout;z-index:1'>
+    <table cellpadding=0 cellspacing=0 width="100%">
+     <tr>
+      <td><![endif]>
+      <div v:shape="_x0000_s1084" style='padding:4.35pt 7.95pt 4.35pt 7.95pt'
+      class=shape>
+      <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+      </div>
+      <![if !mso]></td>
+     </tr>
+    </table>
+    </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+   </tr>
+  </table>
+  </span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <br style='mso-ignore:vglayout' clear=ALL>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>Label2<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>MOV #16, R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>MOV #h41, R04<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>POP R05<span style='mso-spacerun:yes'>           </span></span></b><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Wingdings;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:
+  Arial;mso-char-type:symbol;mso-symbol-font-family:Wingdings;mso-no-proof:
+  yes'><span style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>ß</span></span></b><b
+  style='mso-bidi-font-weight:normal'><span lang=PT style='font-size:10.0pt;
+  font-family:Arial;mso-ansi-language:PT'><o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>Label3<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>STB R04, @R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>ADD #1, R03<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>ADD #1, R04<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=PT style='font-size:10.0pt;font-family:Arial;mso-ansi-language:
+  PT'>CMP R05, R04<span style='mso-spacerun:yes'>  </span><span
+  style='mso-spacerun:yes'> </span></span></b><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Wingdings;mso-ascii-font-family:
+  Arial;mso-hansi-font-family:Arial;mso-bidi-font-family:Arial;mso-char-type:
+  symbol;mso-symbol-font-family:Wingdings;mso-no-proof:yes'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>ß</span></span></b><b
+  style='mso-bidi-font-weight:normal'><span lang=PT style='font-size:10.0pt;
+  font-family:Arial;mso-ansi-language:PT'><o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>JNE $Label3<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'>RET<o:p></o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
+  normal'><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'>Add a second parameter to change the starting address of
+  the data as a challenge and write the code in the box above!<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span style='font-size:10.0pt;
+  font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+  Arial'>** Now save the above code! **</span></b><span style='font-size:10.0pt;
+  font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=Para style='margin-left:0cm'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dal Makhani</title>
+  <script src="/Project1/javascript.js" defer></script>
+  <script src="/Project1/search.js"></script>
+  <link rel="stylesheet" href="/Project1/style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="/Project1/Recipes.html">Recipes</a></li>
+        <li><a href="/Project1/Blog.html">Contact Us</a></li>
+        <li><a href="/Project1/AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="/Project1/AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+  <section id="recipe-temp">
+    <div class="img-hold">
+      <img src="/Project1/images1/dm.jpg">
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="prep-con">
+      <p class="p1"><span class="pp">Prep: 10 minuntes</span> || <span class="pp">Cook: </span>2 hours ||
+        <span class="pp">Serves: </span>5</p>
+      <p class="p1">Creamy & buttery Dal Makhani is one of India's most special and popular dal.</p>
+    </div>
+  </section>
+
+  <section id="ingredients">
+    <div class="con">
+      <div class="he">
+        <p>Ingredients:</p>
+        <p style="margin-left: 500px;">Method:</p>
+      </div>
+
+      <div style="margin: 20px 40px; display: flex;">
+        <div class="l">
+          <input type="checkbox">
+          <label>3/4 cup urad dal sabut</label>
+          <br>
+          <input type="checkbox">
+          <label>1/4 cup rajma</label>
+          <br>
+          <input type="checkbox">
+          <label>2 tsp garlic and ginger paste</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp crushed Green Chilli-Ginger</label>
+          <br>
+          <input type="checkbox">
+          <label>2 tbsp ghee</label>
+          <br>
+          <input type="checkbox">
+          <label>2 tbsp butter</label>
+          <br>
+          <input type="checkbox">
+          <label>1 medium white onion</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 cup tomato puree</label>
+          <br>
+          <input type="checkbox">
+          <label>Salt</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp red chilli powder</label>
+          <br>
+          <input type="checkbox">
+          <label>1/4 tsp garam masala</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp sugar</label>
+          <br>
+          <input type="checkbox">
+          <label>Water</label>
+          <br>
+        </div>
+
+        <div class="r">
+          <p class="step">Step 1</p>
+          <p class="desc">Wash and rinse urad dal and rajma in a large bowl. Soak in 3 cups water overnight. In the morning, drain the water in which the dal and rajma was soaked. Transfer the dal and rajma to a pressure cooker with 1 teaspoon salt. Add around 3.5 cups water. 
+        </p>
+          <p class="step">Step 2</p>
+          <p class="desc">Pressure cook on high-medium heat for 10 whistles, then lower the heat to low-medium and cook for another 10 minutes. In total around 15 to 20 whistles. Let the pressure release naturally. The dal and rajma should be completely cooked and mash some of the dal and rajma using a potato masher. Then turn on the heat to lowest heat and let the dal simmer while you make the masala.</p>
+          <p class="step">Step 3</p>
+          <p class="desc">To make the masala, in a large pot/pan, heat 2 tbsp butter and 1 tbsp ghee on medium heat. Once the butter melts and is hot, add the finely grated onion. Cook the onion for around 6 to 7 minutes or until it turns light golden brown. Keep stirring it continuously so that it doesn't burn and keep heat on medium.</p>
+          <p class="step">Step 4</p>
+          <p class="desc">Add the ginger garlic paste and cook for 1 to 2 minute until the raw smell goes away. Add the tomato puree and mix. Cook for 2 minutes. Add in the boiled dal and mix. Add garam masala, red chili powder and salt. Mix to combine. </p>
+          <p class="step">Step 5</p>
+          <p class="desc">Add 1/2 cup water, stir and set heat to low. Let it simmer on low heat uncovered for around 45 minutes. Stir often. Add sugar and mix after the dal has simmered for 45 minutes.</p>
+          <p class="step">Step 6</p>
+          <p class="desc">Also add the remaining 1 tbsp butter and 1/4 cup cream. Mix well. Simmer for 10 more minutes on low heat after adding the cream. Dal will become really creamy by now.</p>
+          <p class="step">Step 7</p>
+          <p class="desc">Garnish dal makhani with more cream and serve with a pat of amul butter. Enjoy!</p>
+    </div>
+  </section>
+
+  <section id="tags">
+    <div class="t">
+      <p>Tags: </p>
+      <a href="/Project1/Dinner.html"><button>Dinner</button></a>
+    </div>
+  </section>
+
+  <section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless
+          classics to
+          modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own
+          creations
+          and create personalised digital cookbooks all on myfoodbook. <a href="/Project1/AboutUs.html" class="af">Learn
+            more
+            about what makes us different from other recipe sites.</a> To start your search, check out some
+          <a href="/Project1/Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 30px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

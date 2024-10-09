@@ -1,0 +1,27 @@
+<html>
+<head>
+<title> React </title>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+class App extends React.Component{
+render(){
+return (
+<div> Hello React</div> 
+);
+}
+}
+ReactDOM.render(<App />,document.getElementById("root"));
+</script>
+
+<!--we have created a component named as App by extending the component
+class which has a render method which returns the React elements so using 
+React.createElement we have created the react elements named as "div" and inside
+that div i need one more element named as "h1".
+now to render these elements we used ReactDOM.render()
+</body></html>

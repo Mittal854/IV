@@ -1,0 +1,125 @@
+.header {
+  background-color: red;
+  color: #fff;
+  width: 93.4%;
+  height: 5vh;
+  font-size: 30px;
+  padding: 30px 50px;
+}
+.navbar {
+  background-color: rgb(215, 124, 85);
+  width: 100%;
+  height: 5.4vh;
+}
+.navbar ul {
+  padding: 0;
+  margin: 0;
+}
+.navbar ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+.navbar ul li:hover {
+  background-color: red;
+}
+.navbar ul li:hover a {
+  color: #fff;
+}
+.bottom {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+.left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 2px 10px;
+}
+.right {
+  background-color: aqua;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 0;
+}
+.right ul li {
+  cursor: pointer;
+  padding: 2px;
+  font-size: 20px;
+}
+@media screen and (max-width: 800px)
+{
+    .header {
+        background-color: red;
+        color: #fff;
+        width: 93.4%;
+        height: 6vh;
+        font-size: 25px;
+        padding: 7px 10px;
+      }
+      .navbar {
+        background-color: rgb(215, 124, 85);
+        width: 100%;
+        height: 5vh;
+      }
+      .navbar ul {
+        padding: 0;
+        margin: 0;
+      }
+      .navbar ul li {
+        display: inline-block;
+        padding: 10px 10px;
+        font-size: 15px;
+      }
+      .navbar ul li a {
+        text-decoration: none;
+        color: black;
+      }
+      .navbar ul li:hover {
+        background-color: red;
+      }
+      .navbar ul li:hover a {
+        color: #fff;
+      }
+      .bottom {
+        height: 80vh;
+        grid-template-columns: 60% 40%; 
+      }
+      .left {
+         grid-column-start: 1;
+        grid-column-end: 2; 
+        padding: 2px 10px;
+      }
+      .left h1
+      {
+        font-size: 20px;
+      }
+      .left p
+      {
+        font-size: 12px
+      };
+      .right {
+        background-color: aqua;
+        grid-column-start: 2;
+        grid-column-end: 3; 
+        padding-left: -50px;
+        
+      }
+      .right ul li {
+        cursor: pointer;
+        padding: 1px;
+        font-size: 10px;
+      }
+
+      .right ul {
+        padding:0;
+        margin:0;
+        list-style: none;
+
+      };
+
+}

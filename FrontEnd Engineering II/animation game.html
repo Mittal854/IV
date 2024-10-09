@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <style>
+      #container {
+        width: 100%;
+        height: 300px;
+        background-color: black;
+      }
+      #box {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        position: relative;
+        left: 1px;
+        top: 1px;
+        transition: left, top;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box"></div>
+    </div>
+
+    <script>
+      let posl = 1;
+      let post = 1;
+      document.addEventListener("keypress", move);
+
+      function move(event) {
+        let presskey = event.key;
+        presskey = presskey.toLowerCase();
+        let box = document.getElementById("box");
+        if (presskey == "a" || presskey == "4" || presskey == "ArrowLeft") {
+          console.log(presskey);
+          box.style.left = posl + "px";
+          posl = posl - 10;
+        } else if (
+          presskey == "s" ||
+          presskey == "2" ||
+          presskey == "ArrowDown"
+        ) {
+          console.log(presskey);
+          box.style.top = post + "px";
+          post = post + 10;
+        } else if (
+          presskey == "d" ||
+          presskey == "ArrowRight" ||
+          presskey == "6"
+        ) {
+          console.log(presskey);
+          box.style.left = posl + "px";
+          posl = posl + 10;
+        } else if (presskey == "w" || presskey == "8" || presskey == "38") {
+          console.log(presskey);
+          box.style.top = post + "px";
+          post -= 10;
+        } else {
+        }
+      }
+    </script>
+  </body>
+</html>

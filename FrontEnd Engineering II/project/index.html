@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSizzle</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="search.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <a href="index.html"
+        ><img
+          src="img/shop sizzle-logos (1)/shop sizzle-logos_white.png"
+          class="logo" />ShopSizzle</a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li id="searchContainer">
+            <form id="searchForm" autocomplete="off">
+              <input type="text" id="searchInput" placeholder="Search..." />
+              <button type="submit" id="searchButton">
+                <i class="fa-solid fa-search"></i>
+              </button>
+              <div id="searchResults" class="hidden"></div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="banner2">
+      <div
+        id="demo"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="2500">
+        <ol class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="shop2.html#suits"><img src="img/banner3.jpeg" /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="shop2.html#blazers"><img src="img/banner5.jpeg" /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="shop2.html"><img src="img/banner4.jpeg" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="banner" class="section-m1">
+      <img
+        src="img/banner6.jpeg"
+        onclick="window.location.href='shop.html#jackets'" />
+    </section>
+    <section id="product1" class="section-p1">
+      <h2>Frosty Finds</h2>
+      <p>Unwrap the Coziest Deals of Our Winter Collection Sale</p>
+      <div class="pro-container">
+        <div class="pro" onclick="window.location.href='sproduct1.html';">
+          <img src="img/jacket.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>BSC 3-STRIPES HOODED INSULATED JACKET</h5>
+            <h4>
+              <del>₹9 999.00</del><span style="color: red"> ₹5 999.00</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct2.html';">
+          <img src="img/jacket2.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>ADIDAS X MARIMEKKO MARATHON JACKET</h5>
+
+            <h4>
+              <del>₹9 999.00</del><span style="color: red"> ₹4 999.00</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct3.html';">
+          <img src="img/jacket3.jpg" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>GRAPHICS CAMO COACH JACKET</h5>
+
+            <h4>
+              <del>₹10 999.00</del><span style="color: red"> ₹4 950.00</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct4.html';">
+          <img src="img/jacket4.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>ADIDAS ADVENTURE WINTER ALLOVER PRINT GORE-TEX JACKET</h5>
+
+            <h4>
+              <del>₹29 999.00</del><span style="color: red"> ₹17 999.50</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct5.html';">
+          <img src="img/hoodie1.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>REAL MADRID LFSTLR HOODIE</h5>
+
+            <h4>
+              <del>₹7 999.00</del><span style="color: red"> ₹3 999.00</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct6.html';">
+          <img src="img/hoodie2.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>ADIDAS MOSCOW GRAPHIC TEE</h5>
+
+            <h4>
+              <del>₹6 999.00</del><span style="color: red"> ₹3 499.00</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct7.html';">
+          <img src="img/hoodie3.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>POLAR FLEECE NATURE HOODIE</h5>
+
+            <h4>
+              <del>₹6 299.00</del><span style="color: red"> ₹2 835.00</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct8.html';">
+          <img src="img/hoodie4.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>Z.N.E. PREMIUM FULL-ZIP HOODED TRACK JACKET</h5>
+
+            <h4>
+              <del>₹10 999.00</del><span style="color: red"> ₹7 699.50</span>
+            </h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+      </div>
+    </section>
+    <section id="banner3" class="section-m1">
+      <img src="img/banner6.jpg" onclick="window.location.href='shop3.html'" />
+    </section>
+    <section id="product1" class="section-p1">
+      <h2>Sizzling Summer Surprises</h2>
+      <p>Dive into Our Newest Arrivals & Savings!</p>
+      <div class="pro-container">
+        <div class="pro" onclick="window.location.href='sproduct9.html';">
+          <img src="img/tshirt1.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>OWN THE RUN HEATHER TEE</h5>
+            <h4>₹2 499.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct10.html';">
+          <img src="img/tshirt2.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>ESSENTIALS SINGLE JERSEY LINEAR EMBROIDERED LOGO TEE</h5>
+            <h4>₹1 999.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct11.html';">
+          <img src="img/tshirt3.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>BRANDLOVE TEE</h5>
+
+            <h4>₹1 500.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct12.html';">
+          <img src="img/tshirt4.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>ESSENTIALS SINGLE JERSEY BIG LOGO TEE</h5>
+
+            <h4>₹1 799.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct13.html';">
+          <img src="img/shorts1.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>MANCHESTER UNITED 23/24 HOME SHORTS</h5>
+
+            <h4>₹3 999.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct14.html';">
+          <img src="img/shorts2.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>HIIT WORKOUT 3-STRIPES SHORTS</h5>
+
+            <h4>₹3 999.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct15.html';">
+          <img src="img/shorts3.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </span>
+            <h5>ADIDAS SELECT SHORTS</h5>
+
+            <h4>₹3 599.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="pro" onclick="window.location.href='sproduct16.html';">
+          <img src="img/shorts4.avif" />
+          <div class="des">
+            <span class="com">adidas</span>
+            <span class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <h5>Z.N.E. PREMIUM SHORTS</h5>
+
+            <h4>₹5 999.00</h4>
+          </div>
+          <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+      </div>
+    </section>
+    <section id="banner4" class="section-p1">
+      <h2>WHAT'S TRENDING</h2>
+      <div class="banner-container">
+        <div class="banner-box">
+          <a href="shop.html#sweatshirts"><img src="img/banner7.webp" /> </a>
+          <span class="banner-des">
+            <h5>SWEATSHIRTS</h5>
+          </span>
+        </div>
+        <div class="banner-box">
+          <a href="shop.html#jackets"><img src="img/banner8.webp" /> </a>
+          <span class="banner-des">
+            <h5>ZIPPER JACKETS</h5>
+          </span>
+        </div>
+        <div class="banner-box">
+          <a href="shop.html#sweaters"><img src="img/banner9.webp" /> </a>
+          <span class="banner-des">
+            <h5>SWEATERS</h5>
+          </span>
+        </div>
+        <div class="banner-box">
+          <a href="shop2.html#suits"><img src="img/banner10.webp" /></a>
+          <span class="banner-des">
+            <h5>SUITS</h5>
+          </span>
+        </div>
+        <div class="banner-box">
+          <a href="shop2.html#blazers"><img src="img/banner11.webp" /></a>
+          <span class="banner-des">
+            <h5>BLAZERS</h5>
+          </span>
+        </div>
+        <div class="banner-box">
+          <a href="shop2.html#achkans"><img src="img/banner12.webp" /></a>
+          <span class="banner-des">
+            <h5>ACHKANS</h5>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section id="banner5" class="section-m1">
+      <h2>SHOP BY OCCASSION</h2>
+      <div
+        id="demo"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="1500">
+        <ol class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="shop.html"><img src="img/banner15.webp" /></a>
+            <div class="carousel-caption"><h3>Travel Diaries</h3></div>
+          </div>
+          <div class="carousel-item">
+            <a href="shop2.html#blazers"><img src="img/banner13.webp" /></a>
+            <div class="carousel-caption"><h3>Office Party</h3></div>
+          </div>
+          <div class="carousel-item">
+            <a href="shop2.html#suits"><img src="img/banner16.webp" /></a>
+            <div class="carousel-caption"><h3>Night Life</h3></div>
+          </div>
+          <div class="carousel-item">
+            <a href="shop2.html#achkans"><img src="img/banner14.webp" /></a>
+            <div class="carousel-caption"><h3>Festive Celebration</h3></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="videos" class="section-p1">
+      <h2>Our Services</h2>
+      <div id="video-container">
+        <div class="video-box">
+          <video autoplay loop muted>
+            <source src="img/video2.mp4" type="video/mp4" />
+          </video>
+          <h6>PERSONALIZATION</h6>
+          <p>
+            Emboss select bags, luggage, belts, leather accessories, and items
+            from the pet's collection with initials to create a truly unique
+            piece.
+          </p>
+        </div>
+        <div class="video-box">
+          <video autoplay loop muted>
+            <source src="img/video1.mp4" type="video/mp4" />
+          </video>
+          <h6>PACKAGING</h6>
+          <p>
+            Choose our online exclusive tote or add a gift message at checkout
+            to enjoy the boutique shopping bag.
+          </p>
+        </div>
+        <div class="video-box">
+          <video autoplay loop muted>
+            <source src="img/video3.mp4" type="video/mp4" />
+          </video>
+          <h6>COLLECT IN STORE</h6>
+          <p>
+            Order online and collect your order from your preferred ShopSizzle
+            boutique.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>
+          Get E-mail updates about our latest shop and
+          <span>special offers.</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="email" placeholder="Your email address" />
+        <button class="normal">Sign Up</button>
+      </div>
+    </section>
+
+    <footer class="footer1">
+      <div class="footerLeft">
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">About Us</h1>
+          <ul class="fList">
+            <li class="fListItem" onclick="window.location.href='about.html'">
+              Company
+            </li>
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              Contact
+            </li>
+            <li class="fListItem" onclick="window.location.href='about.html'">
+              Careers
+            </li>
+            <li class="fListItem" onclick="window.location.href='about.html'">
+              Affiliates
+            </li>
+            <li class="fListItem" onclick="window.location.href='about.html'">
+              Stores
+            </li>
+          </ul>
+        </div>
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">My Account</h1>
+          <ul class="fList">
+            <li class="fListItem" onclick="window.location.href='signin.html'">
+              Sign In
+            </li>
+            <li class="fListItem" onclick="window.location.href='cart.html'">
+              View Cart
+            </li>
+            <li class="fListItem" onclick="window.location.href='cart.html'">
+              My Wishlist
+            </li>
+            <li class="fListItem" onclick="window.location.href='cart.html'">
+              Track My Order
+            </li>
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              Help
+            </li>
+          </ul>
+        </div>
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">Useful Links</h1>
+          <ul class="fList">
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              Support
+            </li>
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              Refund
+            </li>
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              FAQ
+            </li>
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              Feedback
+            </li>
+            <li class="fListItem" onclick="window.location.href='contact.html'">
+              Stories
+            </li>
+          </ul>
+        </div>
+        <div class="footerMenu">
+          <h1 class="fMenuTitle">Products</h1>
+          <ul class="fList">
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop.html#sweatshirts'">
+              Sweatshirts
+            </li>
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop.html#jackets'">
+              Zipper Jackets
+            </li>
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop.html#sweaters'">
+              Sweaters
+            </li>
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop2.html#suits'">
+              Suits
+            </li>
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop2.html#blazers'">
+              Blazers
+            </li>
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop3.html#shorts'">
+              Shorts
+            </li>
+            <li
+              class="fListItem"
+              onclick="window.location.href='shop3.html#tshirts'">
+              Tshirts
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerRight">
+        <div class="footerRightMenu">
+          <h1 class="fMenuTitle">Follow Us</h1>
+          <div class="ficons">
+            <i class="fa-brands fa-facebook-f ficon"></i>
+            <i class="fa-brands fa-instagram ficon"></i>
+            <i class="fa-brands fa-x-twitter ficon"></i>
+            <i class="fa-brands fa-youtube ficon"></i>
+            <i class="fa-brands fa-whatsapp ficon"></i>
+          </div>
+        </div>
+        <div class="footerRightMenu">
+          <h1 class="fMenuTitle">Contact Us</h1>
+          <div class="ficons">
+            <i class="fa-duotone fa-phone ficon"></i>
+            <i class="fa-sharp fa-solid fa-envelope ficon"></i>
+            <i class="fa-sharp fa-solid fa-location-dot ficon"></i>
+          </div>
+        </div>
+        <div class="footerRightMenu">
+          <span class="copyright">
+            <span>©</span>
+            <span>2024 Shop Sizzle India Marketing Pvt. Ltd</span>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

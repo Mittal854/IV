@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butter Chicken</title>
+  <script src="/Project1/javascript.js" defer></script>
+  <script src="/Project1/search.js"></script>
+  <link rel="stylesheet" href="/Project1/style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="/Project1/Recipes.html">Recipes</a></li>
+        <li><a href="/Project1/Blog.html">Contact Us</a></li>
+        <li><a href="/Project1/AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="/Project1/AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+  <section id="recipe-temp">
+    <div class="img-hold">
+      <img src="/Project1/images1/bc.jpg">
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="prep-con">
+      <p class="p1"><span class="pp">Prep: 15 minuntes</span> || <span class="pp">Cook: </span>30 minutes ||
+        <span class="pp">Serves: </span>5</p>
+      <p class="p1">This creamy Butter Chicken is full of flavours and is super easy to make.</p>
+    </div>
+  </section>
+
+  <section id="ingredients">
+    <div class="con">
+      <div class="he">
+        <p>Ingredients:</p>
+        <p style="margin-left: 500px;">Method:</p>
+      </div>
+
+      <div style="margin: 20px 40px; display: flex;">
+        <div class="l">
+          <input type="checkbox">
+          <label>800g boneless and skinless chicken thighs or breasts</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 cup plain yogurt</label>
+          <br>
+          <input type="checkbox">
+          <label>3 tbsp minced garlic and ginger</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp crushed Green Chilli-Ginger</label>
+          <br>
+          <input type="checkbox">
+          <label>2 tsp red chilli powder</label>
+          <br>
+          <input type="checkbox">
+          <label>3 tsp ground cumin</label>
+          <br>
+          <input type="checkbox">
+          <label>4 tsp garam masala</label>
+          <br>
+          <input type="checkbox">
+          <label>2 tbsp olive oil and ghee</label>
+          <br>
+          <input type="checkbox">
+          <label>Salt</label>
+          <br>
+          <input type="checkbox">
+          <label>1 large onion, sliced or chopped</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp ground coriander</label>
+          <br>
+          <input type="checkbox">
+          <label>400g crushed tomatoes</label>
+          <br>
+          <input type="checkbox">
+          <label>1 cup of heavy cream</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 teaspoon kasoori methi</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tbsp sugar</label>
+          <br>
+        </div>
+
+        <div class="r">
+          <p class="step">Step 1</p>
+          <p class="desc">In a bowl, combine chicken with all of the ingredients for the chicken marinade; let marinate for 30 minutes to an hour. Heat oil in a large skillet or pot over medium-high heat. When sizzling, add chicken pieces. Fry until browned for only 3 minutes on each side. Set aside and keep warm.
+        </p>
+          <p class="step">Step 2</p>
+          <p class="desc">Heat butter or ghee in the same pan. Fry the onions until they start to sweat while scraping up any browned bits stuck on the bottom of the pan. Add garlic and ginger and sauté for 1 minute until fragrant, then add ground coriander, cumin and garam masala. Let cook for about 20 seconds until fragrant, while stirring occasionally.</p>
+          <p class="step">Step 3</p>
+          <p class="desc">Add crushed tomatoes, chili powder and salt. Let simmer for about 10-15 minutes, stirring occasionally until sauce thickens and becomes a deep brown red colour.</p>
+          <p class="step">Step 4</p>
+          <p class="desc">Remove from heat, scoop mixture into a blender and blend until smooth. You may need to add a couple tablespoons of water to help it blend (up to 1/4 cup). Work in batches depending on the size of your blender.</p>
+          <p class="step">Step 5</p>
+          <p class="desc">Pour the puréed sauce back into the pan. Stir the cream, sugar and crushed kasoori methi through the sauce. Add the chicken with juices back into the pan and cook for an additional 8-10 minutes until chicken is cooked through and the sauce is thick and bubbling.</p>
+          <p class="step">Step 6</p>
+          <p class="desc">Garnish with chopped cilantro and serve with fresh, hot garlic butter rice and fresh homemade Naan bread!</p>
+    </div>
+  </section>
+
+  <section id="tags">
+    <div class="t">
+      <p>Tags: </p>
+      <a href="/Project1/Dinner.html"><button>Dinner</button></a>
+      <a href="/Project1/Non-Veg.html"><button>Non-Veg</button></a>
+    </div>
+  </section>
+
+  <section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless
+          classics to
+          modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own
+          creations
+          and create personalised digital cookbooks all on myfoodbook. <a href="/Project1/AboutUs.html" class="af">Learn
+            more
+            about what makes us different from other recipe sites.</a> To start your search, check out some
+          <a href="/Project1/Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 30px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

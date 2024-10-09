@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Meter</title>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body{
+	background-image: url('grape-cask-wineglass-isolated-white-background_219958-866.avif');
+	background-repeat: no-repeat;
+	background-size:55%;
+	background-position-x: right;
+
+}
+.h1{
+	margin-top: 50px;
+	margin-left: 420px;
+	font-size: 40px;
+	color:rgb(114, 19, 19);
+}
+form {
+	margin-bottom: 30px;
+}
+
+label {
+	width: 220px;
+	display: inline-block;
+	margin-left: 400px;
+	margin-top: 15px;
+	color: rgb(45, 13, 13);
+	font-size: 18px;
+}
+input{
+	color:rgb(114, 19, 19);
+	background-color: rgb(240, 237, 233);
+}
+button{
+     margin-left: 350px;
+	 margin-top: 20px;
+	 padding: 9px;
+	 border-radius: 10px;
+}
+.b1{
+	background-color: rgb(170, 43, 43);
+	color: white;
+}
+.b2{
+	margin-left: 350px;
+	width: 100px;
+	margin-top: 10px;
+	background-color: rgb(170, 43, 43);
+	color: white;
+	/*padding: 8px;
+	height:36px;*/
+} 
+    </style>
+
+</head>
+
+<body>
+    <h1 class="h1">Wine Quality Meter</h1>
+    <div class="container">
+        <form action="{{url_for("get_value")}}" method="post">
+            <div class="input-field">
+                <label for="fixed-acidity">Fixed Acidity (g/dm³)</label>
+                <input type="number" id="fixed-acidity" name="fixed-acidity">
+            </div>
+            <div class="input-field">
+                <label for="volatile-acidity">Volatile Acidity (g/dm³)</label>
+                <input type="number" id="volatile-acidity" name="volatile-acidity">
+            </div>
+            <div class="input-field">
+                <label for="citric-acid">Citric Acid (g/dm³)</label>
+                <input type="number" id="citric-acid" name="citric-acid">
+            </div>
+            <div class="input-field">
+                <label for="residual-sugar">Residual Sugar (g/dm³)</label>
+                <input type="number" id="residual-sugar" name="residual-sugar">
+            </div>
+            <div class="input-field">
+                <label for="chlorides">Chlorides (g/dm³)</label>
+                <input type="number" id="chlorides" name="chlorides">
+            </div>
+            <div class="input-field">
+                <label for="free-sulfur-dioxide">Free Sulfur Dioxide (mg/dm³)</label>
+                <input type="number" id="free-sulfur-dioxide" name="free-sulfur-dioxide">
+            </div>
+            <div class="input-field">
+                <label for="total-sulfur-dioxide">Total Sulfur Dioxide (mg/dm³)</label>
+                <input type="number" id="total-sulfur-dioxide" name="total-sulfur-dioxide">
+            </div>
+            <div class="input-field">
+                <label for="density">Density (g/dm³)</label>
+                <input type="number" id="density" name="density">
+            </div>
+            <div class="input-field">
+                <label for="ph">pH (0-14)</label>
+                <input type="number" id="ph" name="ph">
+            </div>
+            <div class="input-field">
+                <label for="sulfates">Sulfates (g/dm³)</label>
+                <input type="number" id="sulfates" name="sulfates">
+            </div>
+            <div class="input-field">
+                <label for="alcohol">Alcohol (% vol)</label>
+                <input type="number" id="alcohol" name="alcohol">
+            </div>
+            <div>
+                <button class="b1" type="submit">Predict Quality</button>
+                <!-- <p id="quality-result"></p> -->
+                <!-- <button class="b2" onclick="clearFields()">Clear Fields</button> -->
+
+
+            </div>
+            <!-- <div class="meter-container">
+        <div id="quality-meter"></div>
+        <p id="quality-text"></p>
+    </div> -->
+        </form>
+        <p id="quality-output" style="display: none;"></p>
+
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('wine-quality-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+                calculateQuality();
+            });
+        });
+
+       function calculateQuality() {
+            fetch('/wine', {
+                method: 'POST',
+                body: new FormData(document.getElementById('wine-quality-form'))
+            })
+            .then(response => response.text())
+            .then(prediction => {
+                var qualityOutput = document.getElementById('quality-output');
+                qualityOutput.style.display = 'block'; // Show the output text
+                if (prediction.trim() === '1') {
+                    qualityOutput.textContent = 'Wine is good.';
+                } else {
+                    qualityOutput.textContent = 'Wine is not good.';
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function firstTask() {
+        console.log("1st task");
+      }
+      function secondTask() {
+        console.log("2nd task");
+      }
+      function thirdTask() {
+        console.log("3rd task");
+      }
+
+      firstTask();
+      secondTask();
+      thirdTask();
+      function somelong() {
+        let start = Date.now();
+        while (Date.now() - start < 5000) {}
+        return "hello";
+      }
+      console.log("starting...");
+      let result = somelong();
+      console.log(result);
+      console.log("ending...");
+      console.log("Start of script");
+
+      setTimeout(function () {
+        console.log("First timeout completed");
+      }, 2000);
+
+      console.log("End of script");
+      const funA = (name, arg2) => {
+        document.write(`hey ${name}. ! How are you<br>`);
+        arg2(); // this is now a callback function
+      };
+      const funB = () => {
+        document.write("hey function b");
+      };
+      funA("bhuvesh", funB);
+      function fetchData(callback) {
+        setTimeout(() => {
+          const data = { name: "John", age: 30 };
+          callback(data);
+        }, 3000);
+      }
+      // Execute function with a callback
+      fetchData(function (data) {
+        console.log(data);
+      });
+      console.log("Data is being fetched...");
+    </script>
+  </body>
+</html>

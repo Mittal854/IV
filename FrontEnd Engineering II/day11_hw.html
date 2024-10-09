@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 15vw 83vw;
+      grid-template-rows: 4vh 5vh 82vh;
+      grid-gap: 25px 20px;
+    }
+    .header {
+      padding: 10px;
+      grid-area: 1/1/2/3;
+      display: grid;
+      grid-template-columns: 40vw 52vw 8vw;
+    }
+    .logo
+    {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .search
+    {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .cart
+    {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .nav {
+      background-color: blue;
+      grid-area: 2/1/3/3;
+      padding-top: 10px;
+      padding-left: 75vw;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+    .left {
+      background-color: grey;
+      grid-area: 3/1/4/2;
+    }
+    .right {
+      background-color: green;
+      grid-area: 3/2/4/3;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">logo</div>
+        <div class="search">
+        <input type="text" placeholder="search" />
+        <button style="background-color: blue">submit</button></div>
+        <div class="cart">Cart</div>
+      </div>
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Catalogue</a>
+        <a href="#">Company</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

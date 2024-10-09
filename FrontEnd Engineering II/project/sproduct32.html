@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ShopSizzle</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> -->
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="search.js"></script>
+    <script src="cart.js"></script>
+  </head>
+  <section id="header">
+    <a href="index.html"
+      ><img
+        src="img/shop sizzle-logos (1)/shop sizzle-logos_white.png"
+        class="logo" />ShopSizzle</a
+    >
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+        </li>
+        <li>
+          <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="img/suit4.webp" width="100%" id="MainImg" alt="" />
+      <div class="small-img-group">
+        <div class="small-img-col">
+          <img src="img/suit4_1.webp" width="100%" class="small-img" />
+        </div>
+        <div class="small-img-col">
+          <img src="img/suit4_2.webp" width="100%" class="small-img" />
+        </div>
+        <div class="small-img-col">
+          <img src="img/suit4_3.webp" width="100%" class="small-img" />
+        </div>
+        <div class="small-img-col">
+          <img src="img/suit4_4.webp" width="100%" class="small-img" />
+        </div>
+      </div>
+    </div>
+    <div class="single-pro-details">
+      <h6>Men • Partywear</h6>
+      <span class="star">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </span>
+
+      <h2>Two Piece Navy Textured Formal Suits - Waves</h2>
+
+      <h4>₹9 995.00</h4>
+      <select>
+        <option>Select Size</option>
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>2XL</option>
+      </select>
+      <input type="number" value="1" id="myNum" min="1" />
+      <button
+        class="normal"
+        id="addToCartButton"
+        onclick="addtocart('Two Piece Navy Textured Formal Suits - Waves',9995.00,'img/suit4.webp')">
+        Add To Cart
+      </button>
+      <h4>Product Details</h4>
+      <span>
+        Elevate your formal wardrobe with the Navy Single Breasted Front Suit,
+        striking the perfect balance between classic design and contemporary
+        finesse. The single-breasted front accentuates the overall appeal, while
+        the mid-rise waistline offers a sleek silhouette. Crafted from woven
+        fabric with a yard-dyed dobby pattern, this suit radiates quality and
+        refinement. With its flap pockets and slim fit, it harmonises
+        functionality with a tailored appearance. Luxuriously stretchable fabric
+        provides unparalleled comfort. Complete your ensemble by combining this
+        suit with a well-fitted Blackberrys shirt and complementing
+        accessories.</span
+      >
+    </div>
+  </section>
+  <section id="product1" class="section-p1">
+    <h2>You May Also Like</h2>
+
+    <div class="pro-container">
+      <div class="pro" onclick="window.location.href='sproduct3.html';">
+        <img src="img/jacket3.jpg" />
+        <div class="des">
+          <span class="com">adidas</span>
+          <span class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </span>
+          <h5>GRAPHICS CAMO COACH JACKET</h5>
+
+          <h4>
+            <del>₹10 999.00</del><span style="color: red"> ₹4 950.00</span>
+          </h4>
+        </div>
+        <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct4.html';">
+        <img src="img/jacket4.avif" />
+        <div class="des">
+          <span class="com">adidas</span>
+          <span class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </span>
+          <h5>ADIDAS ADVENTURE WINTER ALLOVER PRINT GORE-TEX JACKET</h5>
+
+          <h4>
+            <del>₹29 999.00</del><span style="color: red"> ₹17 999.50</span>
+          </h4>
+        </div>
+        <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct6.html';">
+        <img src="img/hoodie2.avif" />
+        <div class="des">
+          <span class="com">adidas</span>
+          <span class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </span>
+          <h5>ADIDAS MOSCOW GRAPHIC TEE</h5>
+
+          <h4>
+            <del>₹6 999.00</del><span style="color: red"> ₹3 499.00</span>
+          </h4>
+        </div>
+        <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+      </div>
+
+      <div class="pro" onclick="window.location.href='sproduct8.html';">
+        <img src="img/hoodie4.avif" />
+        <div class="des">
+          <span class="com">adidas</span>
+          <span class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </span>
+          <h5>Z.N.E. PREMIUM FULL-ZIP HOODED TRACK JACKET</h5>
+
+          <h4>
+            <del>₹10 999.00</del><span style="color: red"> ₹7 699.50</span>
+          </h4>
+        </div>
+        <a href="#"><i class="fa-regular fa-cart-shopping cart"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>
+        Get E-mail updates about our latest shop and
+        <span>special offers.</span>
+      </p>
+    </div>
+    <div class="form">
+      <input type="email" placeholder="Your email address" />
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+  <footer class="footer1">
+    <div class="footerLeft">
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">About Us</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Company
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Contact
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Careers
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Affiliates
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Stores
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">My Account</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='signin.html'">
+            Sign In
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            View Cart
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            My Wishlist
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            Track My Order
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Help
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Useful Links</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Support
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Refund
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            FAQ
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Feedback
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Stories
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Products</h1>
+        <ul class="fList">
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweatshirts'">
+            Sweatshirts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#jackets'">
+            Zipper Jackets
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweaters'">
+            Sweaters
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#suits'">
+            Suits
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#blazers'">
+            Blazers
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#shorts'">
+            Shorts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#tshirts'">
+            Tshirts
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerRight">
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Follow Us</h1>
+        <div class="ficons">
+          <i class="fa-brands fa-facebook-f ficon"></i>
+          <i class="fa-brands fa-instagram ficon"></i>
+          <i class="fa-brands fa-x-twitter ficon"></i>
+          <i class="fa-brands fa-youtube ficon"></i>
+          <i class="fa-brands fa-whatsapp ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Contact Us</h1>
+        <div class="ficons">
+          <i class="fa-duotone fa-phone ficon"></i>
+          <i class="fa-sharp fa-solid fa-envelope ficon"></i>
+          <i class="fa-sharp fa-solid fa-location-dot ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <span class="copyright">
+          <span>©</span>
+          <span>2024 Shop Sizzle India Marketing Pvt. Ltd</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    function checkProductInCart() {
+      let productName = "Two Piece Navy Textured Formal Suits - Waves";
+
+      let itemIndex = cartItems.findIndex(
+        (item) => item.productName === productName
+      );
+
+      if (itemIndex !== -1) {
+        document.getElementById("addToCartButton").textContent = "Added";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      loadCartFromLocalStorage();
+
+      checkProductInCart();
+
+      displayCart();
+      updateCartSummary();
+    });
+  </script>
+</html>

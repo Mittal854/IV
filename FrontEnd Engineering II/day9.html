@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .item {
+      background-color: aqua;
+      width: 700px;
+      margin: 70px 00 50px;
+      display: grid;
+      grid-template-columns: 150px 200px auto;
+      grid-template-rows: 150px 200px;
+      grid-gap: 15px 10px;
+    }
+    .d1 {
+      background-color: orangered;
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+    .d2 {
+      background-color: yellow;
+      grid-area:2/ 3/ 3/ 4;
+    }
+    .d3 {
+      background-color: green;
+    }
+    .d4 {
+      background-color: blue;
+    }
+    .d5 {
+      background-color: purple;
+    }
+    .d6 {
+      background-color: pink;
+    }
+  </style>
+  <body>
+    <div class="item">
+      <div class="d1">div1</div>
+      <div class="d2">div2</div>
+      <div class="d3">div3</div>
+      <div class="d4">div4</div>
+      <div class="d5">div5</div>
+      <div class="d6">div6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      document.write("Factorial in  incremental order: <br>");
+      a = parseInt(prompt("Enter a number(factorial): "));
+      if (a == 0) {
+        document.write("Factorial of 0 is 1");
+      } else {
+        var fact = 1;
+        for (i = 1; i < a; i++) {
+          document.write(i + "*");
+          fact = fact * i;
+        }
+        document.write(a + " = " + fact * a + "<br>");
+      }
+      document.write("Factorial in  decremental order: <br>");
+      b = parseInt(prompt("Enter a number(factorial): "));
+      if (b == 0) {
+        document.write("Factorial of 0 is 1");
+      } else {
+        var fact = 1;
+        for (i = b; i > 1; i--) {
+          document.write(i + "*");
+          fact = fact * i;
+        }
+        document.write("1 = " + fact + "<br>");
+      }
+      document.write("Fibonnaci series: <br>");
+      c = parseInt(prompt("Enter a number(fibonnaci): "));
+      var n1 = 0,
+        n2 = 1,
+        n3;
+      if (c == 1) {
+        document.write(n1);
+      } else if (c == 2) {
+        document.write(n1 + " " + n2);
+      } else {
+        document.write(n1 + " " + n2 + " ");
+        for (i = 3; i <= c; i++) {
+          n3 = n1 + n2;
+          document.write(n3 + " ");
+          n1 = n2;
+          n2 = n3;
+        }
+      }
+      document.write("<br>");
+      document.write("Table: <br>");
+      d = parseInt(prompt("Enter a number(table): "));
+      for (i = 1; i <= 10; i++) {
+        document.write(d + "*" + i + " = " + d * i + "<br>");
+      }
+      document.write("Armstrong: <br>");
+      e = parseInt(prompt("Enter a number(armstrong): "));
+      var sum = 0;
+      const temp = e;
+      while (e > 0) {
+        let rem = e % 10;
+        sum += rem * rem * rem;
+        e = parseInt(e / 10);
+      }
+      if (sum == temp) {
+        document.write("Armstrong number<br>");
+      } else {
+        document.write("Not an Armstrong number<br>");
+      }
+      document.write("Palindrome: <br>");
+      f = parseInt(prompt("Enter a number(palindrome): "));
+      var sum = 0;
+      const temp1 = f;
+      while (f > 0) {
+        let rem = f % 10;
+        sum = sum * 10 + rem;
+        f = parseInt(f / 10);
+      }
+      if (sum == temp1) {
+        document.write("Palindrome number<br>");
+      } else {
+        document.write("Not a Palindrome number<br>");
+      }
+      document.write("Sum of digits: <br>");
+      g = parseInt(prompt("Enter a number(sum): "));
+      var sum = 0;
+      while (g > 0) {
+        let rem = g % 10;
+        sum += rem;
+        g = parseInt(g / 10);
+      }
+      document.write("Sum of digits: " + sum + "<br>");
+      document.write("reverse: <br>");
+      h = parseInt(prompt("Enter a number(reverse): "));
+      var sum = 0;
+      while (h > 0) {
+        let rem = h % 10;
+        sum = sum * 10 + rem;
+        h = parseInt(h / 10);
+      }
+      document.write("Reverse: " + sum + "<br>");
+    </script>
+  </body>
+</html>

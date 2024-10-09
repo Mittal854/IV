@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matar Malai Methi</title>
+  <script src="/Project1/javascript.js" defer></script>
+  <script src="/Project1/search.js"></script>
+  <link rel="stylesheet" href="/Project1/style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="/Project1/Recipes.html">Recipes</a></li>
+        <li><a href="/Project1/Blog.html">Contact Us</a></li>
+        <li><a href="/Project1/AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="/Project1/AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+  <section id="recipe-temp">
+    <div class="img-hold">
+      <img src="/Project1/images1/mmm.webp">
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="prep-con">
+      <p class="p1"><span class="pp">Prep: 10 minuntes</span> || <span class="pp">Cook: </span>20 minutes ||
+        <span class="pp">Serves: </span>4</p>
+      <p class="p1">This Matar Malai Methi recipe is so creamy and rich in flavours.</p>
+    </div>
+  </section>
+
+  <section id="ingredients">
+    <div class="con">
+      <div class="he">
+        <p>Ingredients:</p>
+        <p style="margin-left: 500px;">Method:</p>
+      </div>
+
+      <div style="margin: 20px 40px; display: flex;">
+        <div class="l">
+          <input type="checkbox">
+          <label>1 medium-sized onion</label>
+          <br>
+          <input type="checkbox">
+          <label>1/4 cup cashews - whole cashews</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp cumin seeds</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp chopped garlic</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp chopped ginger</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp chopped green chilies</label>
+          <br>
+          <input type="checkbox">
+          <label>1 cup chopped fenugreek leaves</label>
+          <br>
+          <input type="checkbox">
+          <label>Oil</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 cup green peas</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 cup light cream</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp sugar</label>
+          <br>
+          <input type="checkbox">
+          <label>Water</label>
+          <br>
+          <input type="checkbox">
+          <label>Salt</label>
+          <br>
+          <input type="checkbox">
+          <label>Coriander Leaves</label>
+          <br>
+          <input type="checkbox">
+          <label>Green Peas</label>
+          <br>
+        </div>
+
+        <div class="r">
+          <p class="step">Step 1</p>
+          <p class="desc">In a grinder jar or blender, add cumin seeds, chopped onions, cashews, garlic, ginger and green chilies. Blend or grind to a smooth paste withput adding any water.
+        </p>
+          <p class="step">Step 2</p>
+          <p class="desc">For cooking the green peas, you can either boil them in a pan with 1.5 cups water for 7 to 8 minutes until tender.</p>
+          <p class="step">Step 3</p>
+          <p class="desc">Heat ghee or oil in a pan or kadai. When the ghee melts or becomes lightly hot, add the ground paste. Sauté the paste for 6 to 7 minutes on a low heat until the fat starts separating from the sides.</p>
+          <p class="step">Step 4</p>
+          <p class="desc">Stir often when sautéing so that the paste does not stick to the pan. Do not brown the paste. </p>
+          <p class="step">Step 5</p>
+          <p class="desc">Add in the chopped fenugreek leaves and sauté further for 2 to 3 minutes. Then add ½ cup water or the stock/water in which the green peas were cooked in two parts. Mix thoroughly and simmer the gravy for 3 to 4 minutes. Stir at intervals. Add the boiled peas and cream.</p>
+          <p class="step">Step 6</p>
+          <p class="desc">Simmer the gravy for 5 to 6 minutes on a low heat. Finally add the sugar and salt. Mix again. At this step, you can opt to sprinkle 2 to 3 pinches of garam masala powder.</p>
+          <p class="step">Step 7</p>
+          <p class="desc">Garnish with coriander leaves and serve methi matar malai hot or warm with naan, paratha or roti.</p>
+    </div>
+  </section>
+
+  <section id="tags">
+    <div class="t">
+      <p>Tags: </p>
+      <a href="/Project1/Dinner.html"><button>Dinner</button></a>
+    </div>
+  </section>
+
+  <section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless
+          classics to
+          modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own
+          creations
+          and create personalised digital cookbooks all on myfoodbook. <a href="/Project1/AboutUs.html" class="af">Learn
+            more
+            about what makes us different from other recipe sites.</a> To start your search, check out some
+          <a href="/Project1/Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 30px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

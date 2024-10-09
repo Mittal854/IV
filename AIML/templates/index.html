@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Boston house price prediction
+</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+body{
+    background-color:#E3F4F4;               
+}
+.label{
+    font-size: 20px;
+}
+.field{
+    font-size: 20px;
+    width:50%
+}
+        .subfield{ 
+            font-size:15px;
+            color:#FF0060;
+        }
+div{
+    padding:10px;
+    margin-top:10px;
+    margin-left:32%;
+}
+h1{
+    color:#1F6E8C;
+    text-align:center;
+    margin-top:50px;
+    font-size:40px;
+}
+#button{
+    background-color:#1F6E8C;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:20px;
+    border-radius:5px;
+    color:white;
+    margin-left:20%;
+}
+    </style>
+    <body>
+        <form action="{{ url_for("get_value")}}" method="post">
+         
+    <h1>Boston House Price Prediction Model</h1>
+    <br>
+<div>
+    <label for="rm" class='label'><b>RM Value : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 3" name="rm" id="email" required>
+    <br>
+    <label class='subfield'>RM value : Range 1 to 8</label>
+<br>
+    <br>
+    
+    <label for="pt" class='label'><b>PT Ratio : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 11" name="pt" id="psw" required>
+    <br>
+    <label class='subfield'>PT Ratio Value : Range 10 to 20</label>
+    
+<br>
+    <br>
+    
+    <label for="lstat" class='label'><b>LSTAT Value : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 11" name="lstat" id="psw-repeat" required>
+    <br>
+    <label class='subfield'>LSTAT Value: Lower state of the population % (Range : 10 to 30)</label>
+    
+    <br>
+    <br>
+    <br>
+
+
+    <button type="submit" id="button">Submit</button>
+<div>  
+</form>
+
+    </body>
+</html>

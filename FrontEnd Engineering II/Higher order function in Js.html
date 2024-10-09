@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<p id="demo"></p>
+<script>
+//map:-does not change the original array.creates a new array from calling a function for every array element.
+/*const n = [65, 44, 12, 4];
+const arr_new = n.map(myFunction);
+
+document.getElementById("demo").innerHTML = arr_new;
+
+function myFunction(num) {
+  return num * 10;
+}*/
+
+<!--filter--->
+/*const num = [32, 33, 16, 40,12,45];
+
+document.getElementById("demo").innerHTML = num.filter(even);
+
+function even(num) {
+  return num %2==0;
+}*/
+
+<!--reduce-->
+//reduce:- method executes a reducer function for array element.method returns a single value: the function's accumulated result.
+
+/*const n = [65, 44, 12, 4,43,30,13,5,8];
+const arr_new = n.reduce(myFunction);
+document.getElementById("demo").innerHTML = arr_new;
+function myFunction(num1,num2) 
+{
+  if(num1>num2)
+  {
+  return num1;
+  }
+  else
+  {
+  return num2;
+  }
+}*/
+<!--ReduceRight--->
+//reduceRight() -> method executes a reducer function for each array element.
+/*const numbers = [2, 45, 30, 100];
+document.getElementById("demo").innerHTML = numbers.reduceRight(getSum);
+
+function getSum(total, num) {
+  return total - num;
+}*/
+</script>
+</body>
+</html>

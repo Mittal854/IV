@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfredo Sauce</title>
+  <script src="/Project1/javascript.js" defer></script>
+  <script src="/Project1/search.js"></script>
+  <link rel="stylesheet" href="/Project1/style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="/Project1/Recipes.html">Recipes</a></li>
+        <li><a href="/Project1/Blog.html">Contact Us</a></li>
+        <li><a href="/Project1/AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="/Project1/AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+  <section id="recipe-temp">
+    <div class="img-hold">
+      <img src="/Project1/images1/ap.jpg">
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="prep-con">
+      <p class="p1"><span class="pp">Prep: 20 minutes</span> || <span class="pp">Cook: </span>10 minutes ||
+        <span class="pp">Serves: </span>3</p>
+      <p class="p1">Rich and creamy Fettuccine Alfredo is one of the easiest pasta dishes to make.</p>
+    </div>
+  </section>
+
+  <section id="ingredients">
+    <div class="con">
+      <div class="he">
+        <p>Ingredients:</p>
+        <p style="margin-left: 500px;">Method:</p>
+      </div>
+
+      <div style="margin: 20px 40px; display: flex;">
+        <div class="l">
+          <input type="checkbox">
+          <label>226 grams fettuccine</label>
+          <br>
+          <input type="checkbox">
+          <label>6 cups water</label>
+          <br>
+          <input type="checkbox">
+          <label>Salt</label>
+          <br>
+          <input type="checkbox">
+          <label>3 to 4 tablespoons Butter</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 teaspoon garlic</label>
+          <br>
+          <input type="checkbox">
+          <label>1 cup whipping cream</label>
+          <br>
+          <input type="checkbox">
+          <label>6 tablespoons parmesan cheese</label>
+          <br>
+          <input type="checkbox">
+          <label>1-2 tsp parsley leaves</label>
+          <br>
+          <input type="checkbox">
+          <label>1/4 tsp ground black pepper</label>
+          <br>
+        </div>
+
+        <div class="r">
+          <p class="step">Step 1</p>
+          <p class="desc">In a deep pan add water and salt. Stir. Place saucepan on stovetop and bring the water to a boil on high heat. Once the water comes to a boil, add the fettuccine pasta. Use a spoon to push the fettuccine down into the boiling water as they soften, until fully submerged.</p>
+          <p class="step">Step 2</p>
+          <p class="desc">Cook pasta according to package instructions or until the al dente. That means cooked through but with a slight bite. Boil fettuccine on medium to high heat. Drain the water, making sure to save and set aside about a 1/2 cup of the cooked pasta water.</p>
+          <p class="step">Step 3</p>
+          <p class="desc">Meanwhile when the pasta is cooking, begin to make the alfredo sauce. In a large, deep skillet melt unsalted butter on low heat. Once the butter has melted, add chopped garlic. Sauté for a few seconds until the raw aroma of garlic goes away. Add the whipping cream. Mix well with a wired whisk. Bring the cream to a gentle boil on low heat.</p>
+          <p class="step">Step 4</p>
+          <p class="desc">With a whisk continuously stir as you bring the cream mixture to a low simmer on a low heat. Once the cream begins to gently boil, further simmer for 1 to 2 minutes on low heat, until the cream thickens a bit. Add grated vegetarian parmesan cheese to the cream and mix well.</p>
+          <p class="step">Step 5</p>
+          <p class="desc">Add the cooked and drained pasta to the prepared alfredo sauce in the pan. With the help of tongs thoroughly mix the pasta and sauce together, so that every pasta is coated in the creamy Alfredo.</p>
+          <p class="step">Step 6</p>
+          <p class="desc">Continue to cook the fettuccine alfredo on low heat for another minute or two, stirring frequently to keep the pasta from sticking or clumping together. If the sauce becomes too thick, add a bit of the reserved pasta water, and stir to combine. Season with salt as needed and crushed black pepper. Mix again, and turn off the heat.</p>
+          <p class="step">Step 7</p>
+          <p class="desc">Serve the pasta hot. Garnish fettuccine alfredo with grated vegetarian parmesan cheese and chopped parsley or soft fresh herb of your choice.</p>
+    </div>
+  </section>
+
+  <section id="tags">
+    <div class="t">
+      <p>Tags: </p>
+      <a href="/Project1/Italian.html"><button>Italian</button></a>
+    </div>
+  </section>
+
+  <section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless
+          classics to
+          modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own
+          creations
+          and create personalised digital cookbooks all on myfoodbook. <a href="/Project1/AboutUs.html" class="af">Learn
+            more
+            about what makes us different from other recipe sites.</a> To start your search, check out some
+          <a href="/Project1/Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 30px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

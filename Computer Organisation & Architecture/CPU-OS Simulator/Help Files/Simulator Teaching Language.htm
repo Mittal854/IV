@@ -1,0 +1,1149 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Simulator%20Teaching%20Language_files/filelist.xml">
+<title>Syntax of simulator teaching language (STL) </title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mustafab</o:Author>
+  <o:LastAuthor>Besim</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2011-12-03T01:48:00Z</o:Created>
+  <o:LastSaved>2011-12-03T01:48:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>564</o:Words>
+  <o:Characters>3217</o:Characters>
+  <o:Company>Edge Hill University</o:Company>
+  <o:Lines>26</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3774</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+  <w:LsdException Locked="true" Name="Normal"/>
+  <w:LsdException Locked="true" Name="heading 1"/>
+  <w:LsdException Locked="true" Name="heading 2"/>
+  <w:LsdException Locked="true" Name="heading 3"/>
+  <w:LsdException Locked="true" Name="heading 4"/>
+  <w:LsdException Locked="true" Name="heading 5"/>
+  <w:LsdException Locked="true" Name="heading 6"/>
+  <w:LsdException Locked="true" Name="heading 7"/>
+  <w:LsdException Locked="true" Name="heading 8"/>
+  <w:LsdException Locked="true" Name="heading 9"/>
+  <w:LsdException Locked="true" Name="toc 1"/>
+  <w:LsdException Locked="true" Name="toc 2"/>
+  <w:LsdException Locked="true" Name="toc 3"/>
+  <w:LsdException Locked="true" Name="toc 4"/>
+  <w:LsdException Locked="true" Name="toc 5"/>
+  <w:LsdException Locked="true" Name="toc 6"/>
+  <w:LsdException Locked="true" Name="toc 7"/>
+  <w:LsdException Locked="true" Name="toc 8"/>
+  <w:LsdException Locked="true" Name="toc 9"/>
+  <w:LsdException Locked="true" Name="caption"/>
+  <w:LsdException Locked="true" Name="Title"/>
+  <w:LsdException Locked="true" Name="Subtitle"/>
+  <w:LsdException Locked="true" Name="Strong"/>
+  <w:LsdException Locked="true" Name="Emphasis"/>
+  <w:LsdException Locked="true" Name="Table Grid"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:script;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-link:"Header Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 225.65pt right 451.3pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 225.65pt right 451.3pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-noshow:yes;
+	mso-style-locked:yes;
+	mso-style-link:Header;
+	mso-ansi-font-size:12.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-locked:yes;
+	mso-style-link:Footer;
+	mso-ansi-font-size:12.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("Simulator%20Teaching%20Language_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("Simulator%20Teaching%20Language_files/header.htm") fcs;
+	mso-endnote-separator:url("Simulator%20Teaching%20Language_files/header.htm") es;
+	mso-endnote-continuation-separator:url("Simulator%20Teaching%20Language_files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-footer:url("Simulator%20Teaching%20Language_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:1794029060;}
+@list l0:level1
+	{mso-level-tab-stop:74.6pt;
+	mso-level-number-position:left;
+	margin-left:74.6pt;
+	text-indent:-18.0pt;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:936408852;}
+@list l1:level1
+	{mso-level-tab-stop:60.45pt;
+	mso-level-number-position:left;
+	margin-left:60.45pt;
+	text-indent:-18.0pt;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:774152844;}
+@list l2:level1
+	{mso-level-tab-stop:46.3pt;
+	mso-level-number-position:left;
+	margin-left:46.3pt;
+	text-indent:-18.0pt;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:-38742230;}
+@list l3:level1
+	{mso-level-tab-stop:32.15pt;
+	mso-level-number-position:left;
+	margin-left:32.15pt;
+	text-indent:-18.0pt;
+	mso-bidi-font-family:"Times New Roman";}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:1342448746;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:74.6pt;
+	mso-level-number-position:left;
+	margin-left:74.6pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:-570948270;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:60.45pt;
+	mso-level-number-position:left;
+	margin-left:60.45pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:-457168128;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:46.3pt;
+	mso-level-number-position:left;
+	margin-left:46.3pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-404834208;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:32.15pt;
+	mso-level-number-position:left;
+	margin-left:32.15pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:1777373302;}
+@list l8:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-bidi-font-family:"Times New Roman";}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:1335365934;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS"'>Syntax
+of simulator teaching language (STL) <o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New"'>program
+ProgName<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New"'>end<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New"'>library
+LibName<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:12.0pt;font-family:"Courier New"'>end<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS"'>Examples
+of STL Statements<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS"'>1.
+Conditional statements<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>if n &lt;&gt; 5 then<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span></span></b><span style='font-family:"Courier New"'>… put program
+statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end if<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>if n &gt; 0 and n &lt; 6 then<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span></span></b><span style='font-family:"Courier New"'>… put program
+statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end if<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>if n &lt; 0 then<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span></span></b><span style='font-family:"Courier New"'>… put program
+statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>else<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span></span></b><span style='font-family:"Courier New"'>… put program
+statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end if<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>select IdNo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>case 0<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+2'>          </span></span></b><span style='font-family:"Courier New"'>… put
+program case statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>case 1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+2'>          </span></span></b><span style='font-family:"Courier New"'>… put
+program case statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>case else<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+2'>          </span></span></b><span style='font-family:"Courier New"'>… put
+program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end select<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>select IdNo<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>case 0, 1, 2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+2'>          </span></span></b><span style='font-family:"Courier New"'>… put
+program case statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>case 10, 11<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+2'>          </span></span></b><span style='font-family:"Courier New"'>… put
+program case statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>case else<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+2'>          </span></span></b><span style='font-family:"Courier New"'>… put
+program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end select<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS"'>2.
+Loops<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>for n = 0 to 9<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>next<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>for n = 0 to 10 step 2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>next<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>while n &lt; 4<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>wend<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>do<span style='mso-tab-count:
+2'>        </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>loop<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>do<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>loop while n &lt; 0<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>break<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>break *<span
+style='mso-spacerun:yes'>    </span></span></b><span style='font-family:"Courier New"'>exits
+out of the outermost loop<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>continue<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS"'>3.
+Subroutines <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>sub TestSub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here<b
+style='mso-bidi-font-weight:normal'> …<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>fun TestAdd(param1, param2)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>Res = param1 + param2<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put more program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub = Res<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>sub TestSub intr 1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>sub TestSub(ExpNo) exception<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here<b
+style='mso-bidi-font-weight:normal'> …<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>sub TestSub synchronise<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here<b
+style='mso-bidi-font-weight:normal'> …<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>sub TestSub as thread<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here<b
+style='mso-bidi-font-weight:normal'> …<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>sub TestSub as thread
+synchronise<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here<b
+style='mso-bidi-font-weight:normal'> …<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><u><span style='font-family:"Courier New"'>Inlining
+subroutines:<o:p></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>inline</span></b><span
+style='font-family:"Courier New"'> <b style='mso-bidi-font-weight:normal'>sub</b>
+<b style='mso-bidi-font-weight:normal'>TestSub</b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here<b
+style='mso-bidi-font-weight:normal'> …<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end</span></b><span
+style='font-family:"Courier New"'> <b style='mso-bidi-font-weight:normal'>sub</b><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>4. Variable declarations<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span>For variables in memory<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>var n integer<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>var b boolean<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>var s1 string<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>var s2 string(20)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>var o object<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>var a array(20) byte<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>For variables in registers<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>regvar n integer<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>regvar b boolean<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>regvar s1 string<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>regvar s2 string(20)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>regvar o object<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>5. Input output statements<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>write (OutputData1,
+OutputData2, OutputData3, …..)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>writeln (OutputData1,
+OutputData2, OutputData3, …..)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>writeln<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>read (InputData)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>read (nowait, InputData)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>6. Calling subroutines<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ACallVal = call Test1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>call Test2(5, “Hello”)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>call Test3<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'>or<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ACallVal = Test1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>Test2(5, “Hello”)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>Test3<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>7. Critical regions<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span><u>Mutex:<o:p></o:p></u></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>enter<span style='mso-tab-count:
+2'>         </span>- start of the critical region<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>leave<span style='mso-tab-count:
+2'>         </span>- end of the critical region<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span><u>counting semaphore:<o:p></o:p></u></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span><b style='mso-bidi-font-weight:normal'>semaphore</b>(<b
+style='mso-bidi-font-weight:normal'>wait</b>, sem)<span
+style='mso-spacerun:yes'>  </span>- sem is variable of type integer<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span><b style='mso-bidi-font-weight:normal'>semaphore</b>(<b
+style='mso-bidi-font-weight:normal'>signal</b>, sem)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>8. Inbuilt libraries<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>getCPUNumber(CPUNo)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>timer start </span></b><span
+style='font-family:"Courier New"'>1000<b style='mso-bidi-font-weight:normal'><span
+style='mso-tab-count:1'>   </span>- interrupt every 1000 msecs<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>timer stop<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>wait<span style='mso-tab-count:
+2'>      </span>- used by parent thread waiting for children<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>wait(</span></b><span
+style='font-family:"Courier New"'>5<b style='mso-bidi-font-weight:normal'>)<span
+style='mso-tab-count:1'>   </span>- time in seconds<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>date(</span></b><span
+style='font-family:"Courier New"'>DateStr<b style='mso-bidi-font-weight:normal'>)<o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>allocmem</span></b><span
+style='font-family:"Courier New"'>(100, MemArry)<span style='mso-tab-count:
+1'>  </span>- 100 bytes<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>9. Inter Process Communications (IPC)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ipc (open, in, 2)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ipc (receive, 2, PID, IPCMsg) <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ipc (open, out, 2)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ipc (send, 3, 2,
+&quot;Hello&quot;, block, timeout 3)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>ipc (close, 2)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>10. Exception handling<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>guard<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>on exception(ExpNo)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end guard<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>11. Resource allocate/deallocate<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>resource(1, allocate) - </span></b><span
+style='font-family:"Courier New"'>use resource numbers 0 to 5<b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>resource(2, free)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:"Comic Sans MS";mso-bidi-font-family:
+"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>12. Assembler<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Comic Sans MS";mso-bidi-font-family:
+"Courier New"'><span style='mso-tab-count:1'>          </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span><b style='mso-bidi-font-weight:normal'>asm<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:2'>          </span>MOV #3, R01<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:2'>          </span>ADD R01, R02<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><span
+style='mso-tab-count:1'>     </span><b style='mso-bidi-font-weight:normal'>end<o:p></o:p></b></span></p>
+
+<p class=MsoNormal><span style='font-family:"Comic Sans MS";mso-bidi-font-family:
+"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Comic Sans MS";mso-bidi-font-family:
+"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Comic Sans MS";mso-bidi-font-family:
+"Courier New"'>13. </span><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>Compiler pragmas<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>#PRAGMA UNROLLCNT</span></b><span
+style='font-family:"Courier New"'> = &lt;number&gt;<span
+style='mso-spacerun:yes'>    </span>used by loop unrolling optimization<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-GB;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Comic Sans MS";
+mso-bidi-font-family:"Courier New"'>14. Object-oriented features<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>class Class1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>var v1 integer is public<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>var v2 string(10) is private<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>sub Class1(a, b) is public<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:2'>          </span></span></b><span style='font-family:
+"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>sub ATest is private<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New"'><span
+style='mso-tab-count:2'>          </span></span></b><span style='font-family:
+"Courier New"'>… put program statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span>end sub<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-family:"Courier New"'>… put class statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>class Class2 inherits from
+Class1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><span style='mso-tab-count:
+1'>     </span></span></b><span style='font-family:"Courier New"'>… put class
+statement(s) here …<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>end<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>var obj1 object<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>instantiate obj1 as Class1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>instantiate obj1 as
+Class2(“yes”, true)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Courier New"'>call obj1.Any1<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

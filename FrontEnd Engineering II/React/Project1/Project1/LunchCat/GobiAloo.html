@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloo Gobi</title>
+  <script src="/Project1/javascript.js" defer></script>
+  <script src="/Project1/search.js"></script>
+  <link rel="stylesheet" href="/Project1/style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="/Project1/Recipes.html">Recipes</a></li>
+        <li><a href="/Project1/Blog.html">Contact Us</a></li>
+        <li><a href="/Project1/AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="/Project1/AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+    <section id="recipe-temp">
+        <div class="img-hold">
+            <img src="/Project1/images1/ag.jpg">
+        </div>
+    </section>
+
+    <section id="prep">
+        <div class="prep-con">
+            <p class="p1"><span class="pp">Prep: 10 minuntes</span> || <span class="pp">Cook: </span>1 hour || <span class="pp">Serves: </span>6</p>
+            <p class="p1">Wonderfully fragrant and loaded with flavor thanks to garam masala, coriander and ground cumin as well as the mild heat of Kashmiri red chiles, this South Asian potato and cauliflower  curry can be served as a vegetarian main or side dish.</p>
+        </div>
+    </section>
+
+    <section id="ingredients">
+        <div class="con">
+            <div class="he">
+                <p>Ingredients:</p>
+                <p style="margin-left: 500px;">Method:</p>
+            </div>
+
+            <div style="margin: 20px 40px; display: flex;">
+                <div class="l">
+                    <input type="checkbox">
+                    <label>1/4 cup vegetable oil, plus more as needed</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>2 large potatoes, peeled and cut into 1-inch cubes</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>4-5 Garlic Cloves, crushed</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 small cauliflower, cut into 1-inch florets</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 medium yellow onion, finely chopped</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>Salt to taste</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 green chilli</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 large garlic clove</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 piece ginger, peeled and grated</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1/2 tsp Turmeric Powder</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1/2 teaspoon Red Chilli Powder</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 tsp ground coriander</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1 tsp garam masala</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1/2 tsp ground cumin</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>1/2 tsp amchur</label>
+                    <br>
+                    <input type="checkbox">
+                    <label>2 tbsp Fresh Coriander Leaves</label>
+                    <br>
+                </div>
+
+                <div class="r">
+                    <p class="step">Step 1</p>
+                    <p class="desc">In a large, deep skillet with a lid, heat the oil over medium-high. Add the potatoes, reduce heat to medium-low and cook, stirring frequently, until the potatoes are par-cooked and a little golden, 8 to 10 minutes. Using a slotted spoon, transfer the potatoes to a medium bowl. Add a little more oil to the skillet, if necessary, add the cauliflower and cook, stirring occasionally, until starting to soften on the outsides, about 5 minutes. Transfer the cauliflower to the bowl with the potatoes.</p>
+                    <p class="step">Step 2</p>
+                    <p class="desc">Stir the cumin seeds into the pan and toast until they crackle and are fragrant, about 30 seconds. Add the onion and green chile; cook, stirring occasionally, scraping up any browned bits from the bottom of the pan, until the onion is soft and golden, about 8 minutes. Add the garlic and ginger; cook, stirring frequently, until fragrant, about 1 minute. Sprinkle on a little salt and the turmeric; stir, until fragrant, about 30 seconds.</p>
+                    <p class="step">Step 3</p>
+                    <p class="desc">Return the potatoes and cauliflower to the pan, then stir in the tomatoes, garam masala, coriander, ground cumin and Kashmiri chile powder. Stir and cook until fragrant, about 2 minutes. Drizzle 3 tablespoons of water around the sides of the pan, stir, scraping up any browned bits.</p>
+                    <p class="step">Step 4</p>
+                    <p class="desc">Cover, then reduce heat to medium-low and cook, stirring occasionally to make sure nothing sticks, until the potatoes are almost fork-tender, 20 to 25 minutes.Season with salt. Re-cover and cook until the potatoes are fork-tender and not mushy, and the cauliflower is tender but still has a bite, about 5 minutes. Taste and season.</p>
+                    <p class="step">Step 5</p>
+                    <p class="desc"> Garnish with fresh coriander leaves and serve hot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tags">
+        <div class="t">
+            <p>Tags: </p>
+            <a href="/Project1/Lunch.html"><button>Lunch</button></a>
+            <a href="/Project1/Dinner.html"><button>Dinner</button></a>
+        </div>
+    </section>
+
+    <section id="footer">
+        <!-- #47A493 -->
+        <div class="logo-end">
+            <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="le"></a>
+        </div>
+        <div class="whole">
+            <div class="left">
+                <p classs="p1">More about Recipe Realm</p>
+                <p class="p2">
+                    Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless
+                    classics to
+                    modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own
+                    creations
+                    and create personalised digital cookbooks all on myfoodbook. <a href="/Project1/AboutUs.html" class="af">Learn
+                        more
+                        about what makes us different from other recipe sites.</a> To start your search, check out some
+                    <a href="/Project1/Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+                </p>
+            </div>
+
+            <div class="right">
+              <p>Sign up for the latest recipes and news</p>
+              <input type="email" placeholder="email address">
+              <button">Subscribe</button>
+              <p style="margin-top: 30px;">Follow Recipe Realm</p>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

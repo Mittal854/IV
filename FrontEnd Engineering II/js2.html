@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<ol id="app">
+  <li>python</li>
+  <li>php</li>
+  <li>Java</li>
+</ol>
+<!-- appendChild -->
+<!-- <button onclick="appFun()">Append</button>
+<script>
+function  appFun() {
+const new_elem = document.createElement("li");
+const text_elem = document.createTextNode("Data Science");
+new_elem.appendChild(text_elem)                                                        ;
+document.getElementById("app").appendChild(new_elem);
+}
+</script> -->
+
+<!--ReplaceChild-->
+<!-- <button onclick="appFun()">Replace</button>
+<script>
+    function appFun() {
+      const data = document.createElement("li");
+      const New_elem = document.createTextNode("Data science");
+      data.appendChild(New_elem);
+    
+      const list = document.getElementById("app");
+      list.replaceChild(data, list.children[1]);
+    }
+</script> -->
+
+<!--removeChild-->
+<button onclick="appFun()">Remove</button>
+<script>
+    function appFun() {
+      const item = document.getElementById("app");
+      if (item.hasChildNodes()) {
+        item.removeChild(item.children[0]);
+      }
+    }
+    </script>
+<!--remove all-->
+<!-- <button onclick="appFun()">Remove</button>
+<script>
+    function appFun() {`
+      const item = document.getElementById("app");
+      while (item.hasChildNodes()) {
+        item.removeChild(item.firstChild);
+      }
+    }
+    </script> -->
+<!--insertBefore-->
+<!--<ul id="insert-1">
+    <li>HTML</li>
+    <li>CSS</li>
+  </ul>
+  <ul id="insert-2">
+    <li>JS</li>
+    <li>React</li>
+    <li>Mongo</li>
+  </ul>
+
+  <button onclick="Fun()">click me</button>
+  <script>
+  function Fun() {
+    const main = document.getElementById("insert-2").lastElementChild;
+    const before = document.getElementById("insert-1");
+    before.insertBefore(main, before.children[0]);
+  }
+  </script>-->
+  <!--insertAdjacentElement-->
+<!-- <button onclick="insert()">beforeEnd</button><br>
+<span id="s1" style="color:yellow">shift Me</span>
+<h2 id="head">content</h2>
+<script>
+function insert() {
+  const data = document.getElementById("s1");
+  const new_data = document.getElementById("head");
+  //new_data.insertAdjacentElement("beforeend", data);
+  new_data.insertAdjacentElement("afterbegin", data);} -->
+
+</script>
+</body>
+</html>

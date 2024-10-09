@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      // function get()
+      // {
+      //     document.getElementById("bt").innerHTML="change";
+      //     document.getElementById("bt").style.backgroundColor="red";
+      //     document.getElementById("bt").style.color="white";
+
+      // }
+      // document.getElementById("bt").innerHTML=x;
+      function all_field() {
+        let u = document.forms["fname"]["uname"].value;
+        let p = document.forms["fname"]["pwd"].value;
+        let c = document.forms["fname"]["cpwd"].value;
+        if (u == "" && p == "" && c == "") {
+          alert("all fiels must be field out");
+          return false;
+        }
+      }
+      function matchpass() {
+        // let p=document.forms['fname']['pwd'].value;
+        // let c=document.forms['fname']['cpwd'].value;
+        let p = document.getElementById("pwd").value;
+        let c = document.getElementById("cpwd").value;
+        if (p != c) {
+          // alert("password not match");
+          // return false;
+          document.getElementById("error").innerHTML = "password not match";
+          document.getElementById("error").style.color = "red";
+          document.getElementById("pwd").style.color = "red";
+          document.getElementById("cpwd").style.color = "red";
+          return false;
+        }
+      }
+    </script>
+    <div id="error"></div>
+    <form name="fname" onsubmit="return all_field()">
+      username:<input type="text" name="uname" id="uname" /><br />
+      password:<input type="password" name="pwd" id="pwd" /><br />
+      c_pwd:<input
+        type="password"
+        name="cpwd"
+        id="cpwd"
+        onblur="return matchpass()" /><br />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

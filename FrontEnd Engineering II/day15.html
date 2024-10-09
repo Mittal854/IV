@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <p id="js" style="background-color: yellow"></p>
+    <script>
+      sum = 0;
+      a = parseInt(prompt("Enter a number"));
+      b = parseInt(prompt("Enter a number"));
+      for (i = a; i <= b; i++) {
+        document.getElementById("js").innerHTML += i + "<br>";
+        sum += i;
+      }
+      document.getElementById("js").innerHTML +=
+        "Sum of " + a + " to " + b + " is " + sum;
+    </script>
+  </body>
+</html>

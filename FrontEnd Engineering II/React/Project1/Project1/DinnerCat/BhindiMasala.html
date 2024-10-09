@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhindi Masala</title>
+  <script src="/Project1/javascript.js" defer></script>
+  <script src="/Project1/search.js"></script>
+  <link rel="stylesheet" href="/Project1/style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="/Project1/Recipes.html">Recipes</a></li>
+        <li><a href="/Project1/Blog.html">Contact Us</a></li>
+        <li><a href="/Project1/AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate"></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="/Project1/AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+  <section id="recipe-temp">
+    <div class="img-hold">
+      <img src="/Project1/images1/BhindiMasala.jpg">
+    </div>
+  </section>
+
+  <section id="prep">
+    <div class="prep-con">
+      <p class="p1"><span class="pp">Prep: 20 minuntes</span> || <span class="pp">Cook: </span>25 minutes || <span class="pp">Serves: </span>3</p>
+      <p class="p1">If there's one okra dish, it is this punjabi style Bhindi Masala.</p>
+    </div>
+  </section>
+
+  <section id="ingredients">
+    <div class="con">
+      <div class="he">
+        <p>Ingredients:</p>
+        <p style="margin-left: 500px;">Method:</p>
+      </div>
+
+      <div style="margin: 20px 40px; display: flex;">
+        <div class="l">
+          <input type="checkbox">
+          <label>250 grams okra</label>
+          <br>
+          <input type="checkbox">
+          <label>Oil</label>
+          <br>
+          <input type="checkbox">
+          <label>1 medium-sized onion</label>
+          <br>
+          <input type="checkbox">
+          <label>1 tsp Ginger Garlic Paste</label>
+          <br>
+          <input type="checkbox">
+          <label>2 medium-sized tomatoes</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp red chilli powder</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp tumeric powder</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp fennel powder</label>
+          <br>
+          <input type="checkbox">
+          <label>Salt</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp garam masala</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp amchur powder</label>
+          <br>
+          <input type="checkbox">
+          <label>2 tbsp chopped coriander leaves</label>
+          <br>
+          <input type="checkbox">
+          <label>1/2 tsp kasoori methi</label>
+          <br>
+          <br>
+        </div>
+
+        <div class="r">
+          <p class="step">Step 1</p>
+          <p class="desc">Rinse the bhindi well in water for a couple of times. Wipe with a kitchen towel. Make sure there is no moisture or water on the okra pods. Remove the base and stalk while chopping them. Chop into 1 or 1.5 inch pieces. Also chop onions and tomatoes. Keep aside. Make a paste of ginger and garlic in mortar-pestle and keep aside.
+        </p>
+          <p class="step">Step 2</p>
+          <p class="desc">Heat 2 tbsp oil in a kadai or pan. Add the chopped bhindi and sauté stirring often till they are completely cooked. Taste the sautéed okra and if the crunchiness is not there and the bhindi have become soft, it means they are cooked. Keep the sautéed bhindi aside.</p>
+          <p class="step">Step 3</p>
+          <p class="desc">Add 1 tbsp oil to the same pan. Add chopped onions and sauté stirring often on low to medium heat till they become translucent and are softened. Add the ginger-garlic paste and sauté on low heat for a few seconds. Add the chopped tomatoes and saute stirring often till the tomatoes become soft and mushy.</p>
+          <p class="step">Step 4</p>
+          <p class="desc">If the tomato mixture becomes too dry and starts sticking to the pan, then add about ¼ cup water. Mix well and continue to cook. Add all the dry ground spice powders one by one. Mix well and saute for a few seconds on low heat.</p>
+          <p class="step">Step 5</p>
+          <p class="desc">Add the sautéed bhindi, crushed kasuri methi, salt and mix so that the onion-tomato masala coats the okra well. Cook for about 2 minutes. Stir in between. Then turn off the heat and add chopped coriander leaves. Mix again.</p>
+          <p class="step">Step 6</p>
+          <p class="desc">Serve Bhindi Masala hot or warm garnished with a few coriander leaves and accompanied with chapati, roti or naan.</p>
+    </div>
+  </section>
+
+  <section id="tags">
+    <div class="t">
+      <p>Tags: </p>
+      <a href="/Project1/Dinner.html"><button>Dinner</button></a>
+    </div>
+  </section>
+
+  <section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="/Project1/HomePage.html"><img src="/Project1/images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless
+          classics to
+          modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own
+          creations
+          and create personalised digital cookbooks all on myfoodbook. <a href="/Project1/AboutUs.html" class="af">Learn
+            more
+            about what makes us different from other recipe sites.</a> To start your search, check out some
+          <a href="/Project1/Breakfast.html" class="af">breakfast recipes</a> and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 30px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

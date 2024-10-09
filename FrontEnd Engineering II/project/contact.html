@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSizzle</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="search.js"></script>
+  </head>
+  <section id="header">
+    <a href="index.html"
+      ><img
+        src="img/shop sizzle-logos (1)/shop sizzle-logos_white.png"
+        class="logo" />ShopSizzle</a
+    >
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+        </li>
+        <li>
+          <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="page-header" class="contact-header">
+    <h2>#Connect with Confidence</h2>
+    <p>Your Voice Matters, Drop Us a Line!</p>
+  </section>
+  <section id="contact-details" class="section-p1">
+    <div class="details">
+      <span>GET IN TOUCH</span>
+      <h2>Visit one of our agency locations or contact us today</h2>
+      <h3>Head Office</h3>
+      <div>
+        <li>
+          <i class="fa-sharp fa-solid fa-location-dot ficon"></i>
+          <p>
+            Chandigarh-Patiala National Highway NH- 64 Village Jansla Rajpura
+            Punjab
+          </p>
+        </li>
+        <li>
+          <i class="fa-sharp fa-solid fa-envelope ficon"></i>
+          <p>shop.sizzle@rediffmail.com</p>
+        </li>
+        <li>
+          <i class="fa-duotone fa-phone ficon"></i>
+          <p>+91 98765-43210</p>
+        </li>
+        <li>
+          <i class="fa-sharp fa-solid fa-clock ficon"></i>
+          <p>Monday - Friday: 9:00 AM to 5:00 PM</p>
+        </li>
+      </div>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.1751352098295!2d76.65720287564315!3d30.51608647468949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1708584602958!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  <section id="form-details" class="section-p1">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <span>LEAVE A MESSAGE</span>
+      <h2>We love to hear from you</h2>
+      <input
+        type="hidden"
+        name="access_key"
+        value="dcb4017e-a1f9-4545-90e6-4c9ca9a1b23a" />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="E-mail" required />
+
+      <textarea
+        name="message"
+        cols="30"
+        rows="10"
+        placeholder="Your Message"></textarea>
+      <button type="submit" class="normal">Submit</button>
+    </form>
+  </section>
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>
+        Get E-mail updates about our latest shop and
+        <span>special offers.</span>
+      </p>
+    </div>
+    <div class="form">
+      <input type="email" placeholder="Your email address" />
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+  <footer class="footer1">
+    <div class="footerLeft">
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">About Us</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Company
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Contact
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Careers
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Affiliates
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Stores
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">My Account</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='signin.html'">
+            Sign In
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            View Cart
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            My Wishlist
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            Track My Order
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Help
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Useful Links</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Support
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Refund
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            FAQ
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Feedback
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Stories
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Products</h1>
+        <ul class="fList">
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweatshirts'">
+            Sweatshirts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#jackets'">
+            Zipper Jackets
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweaters'">
+            Sweaters
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#suits'">
+            Suits
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#blazers'">
+            Blazers
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#shorts'">
+            Shorts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#tshirts'">
+            Tshirts
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerRight">
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Follow Us</h1>
+        <div class="ficons">
+          <i class="fa-brands fa-facebook-f ficon"></i>
+          <i class="fa-brands fa-instagram ficon"></i>
+          <i class="fa-brands fa-x-twitter ficon"></i>
+          <i class="fa-brands fa-youtube ficon"></i>
+          <i class="fa-brands fa-whatsapp ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Contact Us</h1>
+        <div class="ficons">
+          <i class="fa-duotone fa-phone ficon"></i>
+          <i class="fa-sharp fa-solid fa-envelope ficon"></i>
+          <i class="fa-sharp fa-solid fa-location-dot ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <span class="copyright">
+          <span>©</span>
+          <span>2024 Shop Sizzle India Marketing Pvt. Ltd</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</html>

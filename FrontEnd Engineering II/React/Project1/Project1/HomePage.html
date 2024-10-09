@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- #75C2B1 -->
+<!-- #178F7A -->
+<!-- #00796B -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Book</title>
+  <script src="javascript.js" defer></script>
+  <script src="search.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <section id="header">
+
+    <a href="HomePage.html"><img src="images1/Logo1.png" class="logo"></a>
+
+    <div style="margin-top: 14px;">
+      <ul id="navbar">
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="Blog.html">Contact Us</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+
+        <!-- Search Bar -->
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+
+        <!-- Login Form Container -->
+        <div id="popup-1" class="popup" style="display: block;">
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">x</div>
+            <p class="log1">Log In to <span style="font-weight: bold; color: #178F7A">Recipe Realm</span></p>
+            <div class="input-field"><input id="loginEmail" placeholder="Email" class="validate" type="email"></div>
+            <div class="input-field"><input id="loginPassword" type="password" placeholder="Password" class="validate">
+            </div>
+            <button class="second-button" onclick="login()">Log In</button>
+            <p>Don't have an account? <a onclick="togglePopup1()"><span
+                  style="color: blue; cursor: pointer;text-decoration: underline;">Register</span></a></p>
+          </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="popup-2">
+          <div class="content" style="height: 600px; top: 400px;">
+            <div class="close-btn" onclick="togglePopup1()">x</div>
+
+            <p class="log1">Create Your <span style="font-weight: bold; color: #178F7A">Recipe Realm</span> Account</p>
+            <div class="input-field"><input id="registerName" placeholder="Name" class="validate"></div>
+            <div class="input-field"><input id="registerPhoneNumber" placeholder="Phone Number" class="validate"></div>
+            <div class="input-field"><input id="registerEmail" placeholder="Email" class="validate" type="email" required></div>
+            <div class="input-field"><input id="registerPassword" placeholder="Password" class="validate"></div>
+            <button class="second-button" onclick="register()">Register</button>
+            <p>Already have an account? <a onclick="togglePopup()"><span
+                  style="color: blue; cursor: pointer; text-decoration: underline;">Login</span></a></p>
+          </div>
+        </div>
+
+        <li><a onclick="togglePopup()" id="loginBtn" style="margin-left:-30px;cursor: pointer;">Login</a></li>
+        <!-- Logout Button -->
+        <button id="logoutButton" style="display: none;" onclick="logout()" class="logout">Logout</button>
+
+        <li><a href="AddARecipe.html" style="margin-left:-30px;">Your Recipes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="below-header">
+    <div class="ideas">
+      <p style="margin-top: -18px;">COOK | COLLECT | CREATE</p>
+    </div>
+  </section>
+
+  <section id="sliding-images">
+    <div>
+      <a href="SnacksCat/Dhokla.html"><img src='images1/d.jpg' class="home1" id="homeImage"></a>
+      <a href="BreakCat/AlooParantha.html"><img src='images1/al.webp' class="home1" id="homeImage"></a>
+      <a href="LunchCat/ChickenCurry.html"><img src='images1/cc.jpg' class="home1" id="homeImage"></a>
+    </div>
+  </section>
+
+  <section id="Categories">
+    <h1>Browse Recipe Categories</h1>
+    <button class="pre-btn"><img src="images1/arrow.png" alt=""></button>
+    <button class="next-btn"><img src="images1/arrow.png" alt=""></button>
+
+    <div class="cat">
+      <div class="holder">
+        <a href="Breakfast.html"><img src="images1/Parantha.webp"></a>
+        <a href="Breakfast.html">
+          <p>Breakfast</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Lunch.html"><img src="images1/Rajma.jpg"></a>
+        <a href="Lunch.html">
+          <p>Lunch</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Snacks.html"><img src="images1/Samosa.webp"></a>
+        <a href="Snacks.html">
+          <p>Snacks</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Dinner.html"><img src="images1/Malai_Kofta.jpg"></a>
+        <a href="Dinner.html">
+          <p>Dinner</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Desserts.html"><img src="images1/GulabJamun.jpeg"></a>
+        <a href="Desserts.html">
+          <p>Desserts</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Italian.html"><img src="images1/Italian.jpg"></a>
+        <a href="Italian.html">
+          <p>Italian</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Non-Veg.html"><img src="images1/Chicken.jpg"></a>
+        <a href="Non-Veg.html">
+          <p>Non-Veg</p>
+        </a>
+      </div>
+
+      <div class="holder">
+        <a href="Bread.html"><img src="images1/RumaliRoti.jpg"></a>
+        <a href="Bread.html">
+          <p>Breads</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="gap">
+    <div style="height:20px; background-color: rgb(232, 232, 232);">
+    </div>
+  </section>
+
+  <section id="today-topic">
+    <h1>Today's Inspiration</h1>
+    <div class="cat3">
+      <div class="hold">
+        <a href="DinnerCat/MatarMalaiMethi.html"><img src="images1/mmm.webp"></a>
+        <br>
+        <a href="DinnerCat/MatarMalaiMethi.html">Matar Malai Methi</a>
+      </div>
+
+      <div class="hold">
+        <a href="DessertCat/Tiramisu.html"><img src="images1/Tiramisu.jpg"></a>
+        <br>
+        <a href="DessertCat/Tiramisu.html">Tiramisu</a>
+      </div>
+
+      <div class="hold">
+        <a href="ChickenCat/Omlette.html"><img src="images1/Omlette.jpg"></a>
+        <br>
+        <a href="ChickenCat/Omlette.html">Omlette</a>
+      </div>
+
+      <div class="hold">
+        <a href="LunchCat/RajmaChawal.html"><img src="images1/Rajma.jpg"></a>
+        <br>
+        <a href="LunchCat/RajmaChawal.html">Rajma Chawal</a>
+      </div>
+
+      <div class="hold">
+        <a href="BreakCat/FrenchToast.html"><img src="images1/FrenchToast.jpg"></a>
+        <br>
+        <a href="BreakCat/FrenchToast.html">French Toast</a>
+      </div>
+
+      <div class="hold">
+        <a href="BreadCat/LachhaParantha.html"><img src="images1/LachhaParantha.jpg"></a>
+        <br>
+        <a href="BreadCat/LachhaParantha.html">Lachha Parantha</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h1>Tips</h1>
+    <div class="cat1">
+
+      <div class="hold1">
+        <div class="i">
+          <img src="images1/Cutting.cms">
+        </div>
+
+        <div class="notes">
+          <p>Tips on Cutting and Peeling</p>
+          <ul style="list-style-type: disc;">
+            <li>Wash vegetables before peeling or cutting to preserve the water soluble vitamins.</li>
+            <li>Peel vegetables as thinly as possible to preserve the minerals and vitamins.</li>
+            <li>Remove the stems of green chilies while storing them .This will help them to stay fresh for long.</li>
+            <li>After peeling onions cut in half and soak in water for about 10 minutes before cutting to avoid crying.
+            </li>
+            <li>Soak potatoes and eggplant after cutting, to avoid discoloration.</li>
+            <li>If you boil vegetables in water, do not throw the water, keep it to make gravies.</li>
+            <li>To avoid browning of apples after cutting, apply a little lemon juice on the cut surface. The apples
+              will stay and look fresh for a longer time.</li>
+            <li>Keep coriander leaves in a muslin cloth bag in the refrigerator. They will remain fresh for a longer
+              time.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hold1">
+
+        <div class="notes" style="margin-left: 20px; margin-right:20px;">
+          <p>Tips on Frying</p>
+          <ul style="list-style-type: disc;">
+            <li>Heat the oil thoroughly before adding seasonings or vegetables.</li>
+            <li>Fry the seasonings until they change color, to get full flavour of seasonings.</li>
+            <li>If masala sticks to the pan that shows quantity of fat included is not enough.</li>
+            <li>Add some hot oil and 1/2 tsp of baking soda in batter while making pakodas.</li>
+            <li>Poori can be rolled and place between well-rinsed wet muslin cloth at least an hour ahead and can be
+              Fried before serving.</li>
+            <li>To make pooris more crispy add a little rice flour to the wheat flour while kneading.</li>
+            <li>Pakodas will turn out crisper if a little corn flour is added to the besan while preparing the batter.
+            </li>
+            <li>If you are making patties or tikkis of potatoes, always make sure that the potatoes are boiled well in
+              advance and cooled before you use them.</li>
+          </ul>
+        </div>
+
+        <div class="i">
+          <img src="images1/Frying.jpg">
+        </div>
+      </div>
+
+      <div class="hold1">
+        <div class="i">
+          <img src="images1/Cooking.jpg">
+        </div>
+
+        <div class="notes">
+          <p>Tips on Cooking</p>
+          <ul style="list-style-type: disc;">
+            <li>To make 1 cup of dal, add atleast 2-3 cups of water, depending on the type of dal.</li>
+            <li>Soak whole pulses overnight and other dals for one hour before cooking.</li>
+            <li>Always add hot water to the gravy to enhance the taste.</li>
+            <li>Add 1 Tbsp of hot oil to the dough for making Kachories or Kulchas.</li>
+            <li>Always use heavy bottomed vessels to make desserts, in order to avoid burning.</li>
+            <li>Whenever curd is to be added to the masala, it should be beaten well and add gradually.</li>
+            <li>Chop some extra vegetables, for next day stir fry.</li>
+            <li>While boiling milk, always add a little water at the base of the vessel to avoid the milk from sticking
+              at the bottom.</li>
+            <li>Add a few drops of lemon a tsp of oil to rice before boiling to separate each grain.</li>
+            <li>Never discard the water in which vegetables are cooked, use it in gravies or soups.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="trending">
+    <h1>Trending Lunch Recipes...</h1>
+
+    <div class="cat21">
+      <div class="hold31">
+        <a href="LunchCat/ChickenCurry.html"><img src="images1/ChickenCurry.jpg"></a>
+        <br>
+        <a href="LunchCat/ChickenCurry.html">Chicken Curry</a>
+      </div>
+
+      <div class="hold31">
+        <a href="LunchCat/PaneerBhurji.html"><img src="images1/PaneerBhurji.jpg"></a>
+        <br>
+        <a href="LunchCat/PaneerBhurji.html">Paneer Bhurji</a>
+      </div>
+
+      <div class="hold31">
+        <a href="LunchCat/MatarPaneer.html"><img src="images1/MatarPaneer.cms"></a>
+        <br>
+        <a href="LunchCat/MatarPaneer.html">Matar Paneer</a>
+      </div>
+
+      <div class="hold31">
+        <a href="LunchCat/MixVeg.html"><img src="images1/MixVeg.jpg"></a>
+        <br>
+        <a href="LunchCat/MixVeg.html">Mix Veg</a>
+      </div>
+
+      <div class="hold31">
+        <a href="LunchCat/EggCurry.html"><img src="images1/EggCurry.jpg"></a>
+        <br>
+        <a href="LunchCat/EggCurry.html">Egg Curry</a>
+      </div>
+
+      <div class="hold31">
+        <a href="LunchCat/AlooShimlamirch.html"><img src="images1/AlooShimlaMirch.jpg"></a>
+        <br>
+        <a href="LunchCat/AlooShimlamirch.html">Aloo Shimlamirch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <!-- #47A493 -->
+    <div class="logo-end">
+      <a href="HomePage.html"><img src="images1/Logo1.png" class="le"></a>
+    </div>
+    <div class="whole">
+      <div class="left">
+        <p class="p1">More about Recipe Realm</p>
+        <p class="p2">
+          Find free, easy-to-follow recipes you can cook at home from Australia's best brands. From timeless classics to
+          modern trends, budget dinners to entertaining delights, save your favourite recipes, upload your own creations
+          and create personalised digital cookbooks all on myfoodbook. <a href="AboutUs.html" class="af">Learn more
+            about us.</a> To start your search, check out some <a href="Breakfast.html" class="af">breakfast recipes</a>
+          and get cooking!
+        </p>
+      </div>
+
+      <div class="right">
+        <p>Sign up for the latest recipes and news</p>
+        <input type="email" placeholder="email address">
+        <button>Subscribe</button>
+        <p style="margin-top: 20px;">Follow Recipe Realm</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS BORDER</title>
+    <style>
+      .dotted {
+        border-style: dotted;
+        border-color: red;
+        border-width: 3px;
+        border-radius: 10px;
+        background-color: yellow;
+        color: blue;
+      }
+      .dashed {
+        border-style: dashed;
+        border-color: blue;
+        border-width: 3px;
+      }
+      .double {
+        border-style: double;
+        border-color: green;
+        border-width: 3px;
+      }
+      .solid {
+        border-style: solid;
+        border-color: yellow;
+        border-width: 3px;
+      }
+      .inset {
+        border: 3px inset red;
+      }
+      .outset {
+        border-style: outset;
+        border-color: blue;
+        border-width: 3px;
+      }
+      .groove {
+        border-style: groove;
+        border-color: green;
+        border-width: 3px;
+      }
+      .m {
+        border-style: dotted dashed double solid;
+        border-color: red blue green yellow;
+        border-width: 3px;
+      }
+      .d1 {
+        height: 85px;
+        width: 100px;
+        background-color: aqua;
+        border: 3px outset black;
+        box-shadow: 10px 12px 10px grey;
+        text-shadow: 1.5px 1.5px 2px black;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="dotted">Dotted Border</p>
+    <p class="dashed">Dashed Border</p>
+    <p class="double">Double Border</p>
+    <p class="solid">Solid Border</p>
+    <p class="inset">Inset Border</p>
+    <p class="outset">Outset Border</p>
+    <p class="groove">Groove Border</p>
+    <p class="m">All Border</p>
+    <div class="d1">
+      <ul>
+        <li>C++</li>
+        <li>C</li>
+        <li>Java</li>
+      </ul>
+    </div>
+  </body>
+</html>

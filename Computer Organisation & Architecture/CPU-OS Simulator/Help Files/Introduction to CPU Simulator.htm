@@ -1,0 +1,1560 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List
+href="Introduction%20to%20CPU%20Simulator_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="Introduction%20to%20CPU%20Simulator_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>1</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mustafab</o:Author>
+  <o:LastAuthor>Besim</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>263</o:TotalTime>
+  <o:LastPrinted>2010-10-27T07:11:00Z</o:LastPrinted>
+  <o:Created>2011-09-08T23:31:00Z</o:Created>
+  <o:LastSaved>2011-09-08T23:31:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>552</o:Words>
+  <o:Characters>3151</o:Characters>
+  <o:Company>EdgeHill</o:Company>
+  <o:Lines>26</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3696</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-fareast-language:EN-US;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.TtlChapter1, li.TtlChapter1, div.TtlChapter1
+	{mso-style-name:"Ttl Chapter 1";
+	mso-style-next:Normal;
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	line-height:36.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:36.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.TtlBlockLabel, li.TtlBlockLabel, div.TtlBlockLabel
+	{mso-style-name:"Ttl Block Label";
+	mso-style-next:Para;
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.TtlOverviewMap, li.TtlOverviewMap, div.TtlOverviewMap
+	{mso-style-name:"Ttl Overview Map";
+	mso-style-next:"Ttl Block Label";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:16.0pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	border:none;
+	mso-border-top-alt:solid windowtext .75pt;
+	padding:0cm;
+	mso-padding-alt:3.0pt 0cm 0cm 0cm;
+	font-size:15.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Para, li.Para, div.Para
+	{mso-style-name:Para;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:72.0pt;
+	line-height:12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("Introduction%20to%20CPU%20Simulator_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("Introduction%20to%20CPU%20Simulator_files/header.htm") fcs;
+	mso-endnote-separator:url("Introduction%20to%20CPU%20Simulator_files/header.htm") es;
+	mso-endnote-continuation-separator:url("Introduction%20to%20CPU%20Simulator_files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 2.0cm 2.0cm 70.9pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-header:url("Introduction%20to%20CPU%20Simulator_files/header.htm") h1;
+	mso-footer:url("Introduction%20to%20CPU%20Simulator_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:128404897;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453929090 67698705 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:182715194;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-886781898 67698705 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:313219222;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2144030158 -682042710 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-start-at:9;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3
+	{mso-list-id:438262139;
+	mso-list-type:hybrid;
+	mso-list-template-ids:108954236 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:451479974;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 56377184 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:522785912;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 56377184 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:603807972;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1573241722 67698693 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	margin-left:144.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l6:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	margin-left:180.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:746725854;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l8
+	{mso-list-id:872108931;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1939805250 67698689 -1747706420 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l8:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l9
+	{mso-list-id:949050569;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l10
+	{mso-list-id:1000354806;
+	mso-list-type:hybrid;
+	mso-list-template-ids:734142780 67698705 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l11
+	{mso-list-id:1040324800;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1527303884 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l12
+	{mso-list-id:1079249260;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:1083919045;
+	mso-list-type:hybrid;
+	mso-list-template-ids:907967460 362718256 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l14
+	{mso-list-id:1088426668;
+	mso-list-type:hybrid;
+	mso-list-template-ids:276219482 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l15
+	{mso-list-id:1144541872;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453929090 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l16
+	{mso-list-id:1261989778;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1973949496 -1277001244 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l16:level1
+	{mso-level-tab-stop:90.0pt;
+	mso-level-number-position:left;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;}
+@list l17
+	{mso-list-id:1276252383;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1181182992 2053908658 -278389798 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l17:level1
+	{mso-level-tab-stop:45.0pt;
+	mso-level-number-position:left;
+	margin-left:45.0pt;
+	text-indent:-18.0pt;}
+@list l17:level2
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:99.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l17:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:117.0pt;
+	mso-level-number-position:right;
+	margin-left:117.0pt;
+	text-indent:-9.0pt;}
+@list l18
+	{mso-list-id:1302272040;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-175729160 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l19
+	{mso-list-id:1356809977;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l20
+	{mso-list-id:1422217352;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698705 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l20:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l20:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l21
+	{mso-list-id:1481648804;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1748540308 411748152 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l21:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-36.0pt;}
+@list l22
+	{mso-list-id:1622758046;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2137929256 67698695 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F071;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:8.0pt;
+	font-family:Wingdings;}
+@list l23
+	{mso-list-id:1698193939;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1786020144 67698703 -1936187288 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l23:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l23:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24
+	{mso-list-id:1768965247;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-259753794 134807557 134807555 134807557 134807553 134807555 134807557 134807553 134807555 134807557;}
+@list l24:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l24:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l24:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l25
+	{mso-list-id:1794859033;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1924935624 582655652 67698689 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l25:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l25:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l26
+	{mso-list-id:1872255095;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1453929090 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l27
+	{mso-list-id:1878739283;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l27:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l27:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l28
+	{mso-list-id:1939410106;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-69802514 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l28:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l29
+	{mso-list-id:1986855431;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-569328130 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l29:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l30
+	{mso-list-id:2035229920;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 67698689 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l30:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l30:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l31
+	{mso-list-id:2067601805;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-971339838 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l31:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l32
+	{mso-list-id:2071029907;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2023293978 240003608 1835720426 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l32:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l32:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33
+	{mso-list-id:2097944661;
+	mso-list-type:hybrid;
+	mso-list-template-ids:994847316 56377184 67698705 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l33:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l33:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l34
+	{mso-list-id:2111470124;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2118028850 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l34:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	margin-left:108.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <o:colormru v:ext="edit" colors="#eaeaea"/>
+  <o:colormenu v:ext="edit" fillcolor="#cff" strokecolor="none"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="#FFFFCC"
+background="Introduction%20to%20CPU%20Simulator_files/image001.jpg" lang=EN-GB
+vlink=purple style='tab-interval:36.0pt'>
+<!--[if gte mso 9]><xml>
+ <v:background id="_x0000_s1025" o:bwmode="white" fillcolor="#ffc">
+  <v:fill src="Introduction%20to%20CPU%20Simulator_files/image001.jpg" o:title="Stationery"
+   color2="#767676" type="tile"/>
+ </v:background></xml><![endif]-->
+
+<div class=Section1>
+
+<div style='mso-element:para-border-div;border:none;border-bottom:solid windowtext 1.0pt;
+mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 0cm 1.0pt 0cm'>
+
+<p class=TtlChapter1 align=left style='margin-top:0cm;text-align:left;
+line-height:normal;border:none;mso-border-bottom-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 1.0pt 0cm'><span style='font-size:28.0pt;
+font-family:Calibri'>Programming the CPU Simulator<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>The CPU simulator can run
+programs manually created. This requires four stages:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>1)
+<span style='mso-spacerun:yes'> </span>Create a CPU program<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>2)
+<span style='mso-spacerun:yes'> </span>Enter CPU instructions in the program<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>3)
+<span style='mso-spacerun:yes'> </span>Run the program<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>4)
+<span style='mso-spacerun:yes'> </span>Observe and control simulations<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>Below is the description
+of these four main stages:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt;font-family:Calibri'>1. Creating a CPU program that
+will contain the instructions<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+ coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1084" type="#_x0000_t202" style='position:absolute;
+ margin-left:272.6pt;margin-top:10.8pt;width:224.25pt;height:109.5pt;z-index:1'
+ fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1084'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=363 height=14></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=303 height=150 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:1'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1084" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>Enter the program’s
+    name in the <b>Program Name</b> text box, e.g. MyProgram. Enter a number in
+    the <b>Base Address</b> text box (suggest you use 0 in this case). Next
+    click the <b>ADD</b> button. The name of the program will appear in the
+    PROGRAM LIST frame (see Fig. 2).<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:230.25pt;
+ height:75pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image002.gif"
+  o:title="screen1"/>
+</v:shape><![endif]--><![if !vml]><img width=307 height=100
+src="Introduction%20to%20CPU%20Simulator_files/image002.gif" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>Fig.
+1 – New program frame<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:218.25pt;height:61.5pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image003.gif"
+  o:title="screen4"/>
+</v:shape><![endif]--><![if !vml]><img width=291 height=82
+src="Introduction%20to%20CPU%20Simulator_files/image003.gif" v:shapes="_x0000_i1029"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>Fig
+2 – Program list frame<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt;font-family:Calibri'>2. Adding CPU instructions in the
+program<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1085" type="#_x0000_t202"
+ style='position:absolute;margin-left:278.6pt;margin-top:.55pt;width:216.75pt;
+ height:82.5pt;z-index:2' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1085'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;margin-left:371px;margin-top:1px;width:293px;height:114px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=114 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:2'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1085" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>In the <b>PROGRAM
+    INSTRUCTIONS</b> frame the <b>ADD NEW…</b> button is enabled. Click this
+    button to view the CPU instructions you can select for your program created
+    above (see Fig. 4 below).<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:237pt;height:67.5pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image004.gif"
+  o:title="screen2"/>
+</v:shape><![endif]--><![if !vml]><img width=316 height=90
+src="Introduction%20to%20CPU%20Simulator_files/image004.gif" v:shapes="_x0000_i1030"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>Fig.
+3 – Program instructions frame<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:12.0pt;font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Selecting CPU instructions to manually enter in the
+program:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:414.75pt;height:330.75pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image005.png"
+  o:title="screen3"/>
+</v:shape><![endif]--><![if !vml]><img width=553 height=441
+src="Introduction%20to%20CPU%20Simulator_files/image006.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:36.0pt'><span
+style='font-family:Calibri'>Fig. 4 – Selecting CPU instructions<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>In the <b>Instructions</b>
+window shown above, you can select any of the available CPU instructions for
+your program. Instructions that are related are categorized into different
+groups. You select a group by clicking on a tab. Select the desired instruction
+from the list under the <b>Op Code</b>. If the selected instruction requires
+operand(s) then the available types will be enabled under the <b>Source Operand</b>
+and the <b>Destination Operand</b> frames. Next, click the <b>NEW</b> button to
+add the instruction. You can add multiple instructions without closing this
+window.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>The instruction will
+appear in CPU program memory area as shown in Fig. 5 below. The CPU simulator
+requires that the last instruction in the program should be the <b>HLT</b> instruction
+(this instruction stops the simulation from running). This is included in Fig.
+5. The program is now ready to run.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>CPU instructions in program:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1086" type="#_x0000_t202"
+ style='position:absolute;margin-left:277.1pt;margin-top:4.65pt;width:216.75pt;
+ height:113.25pt;z-index:3' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1086'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=369 height=6></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=293 height=155 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:3'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1086" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>Each entry in the <b>INSTRUCTION
+    MEMORY</b> view includes the following information:<o:p></o:p></span></p>
+    <p class=MsoNormal><b><span style='font-family:Calibri'>PAdd</span></b><span
+    style='font-family:Calibri'> (Physical Address), <b>LAdd</b> (Logical
+    Address) and the instruction. Other information is also available but this
+    is not relevant at this stage.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:237pt;height:80.25pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image007.gif"
+  o:title="screen5"/>
+</v:shape><![endif]--><![if !vml]><img width=316 height=107
+src="Introduction%20to%20CPU%20Simulator_files/image007.gif" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>Fig.
+5 – CPU program memory<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1088" type="#_x0000_t202"
+ style='position:absolute;margin-left:277.85pt;margin-top:13.55pt;width:216.75pt;
+ height:154.5pt;z-index:5' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1088'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:5;margin-left:370px;margin-top:18px;width:293px;height:210px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=210 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:5'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1088" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>Once the program
+    instructions are entered they can be edited. To do this, select the desired
+    instruction and use one of the editing functions (<b>EDIT</b>, <b>DELETE</b>,
+    <b>MOVE UP</b>, <b>MOVE DOWN</b>) shown in Fig. 6 to edit the selected
+    instruction. Use the <b>INSERT ABOVE…</b> and the <b>INSERT BELOW…</b>
+    buttons to insert a new instruction above or below the selected
+    instruction.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><b style='mso-bidi-font-weight:normal'><span style='font-family:
+Calibri'>Editing the program instructions:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:237.75pt;height:1in'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image008.gif"
+  o:title="screen6"/>
+</v:shape><![endif]--><![if !vml]><img width=317 height=96
+src="Introduction%20to%20CPU%20Simulator_files/image008.gif" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>Fig.
+6 – Program edit functions<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Removing the program:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1089" type="#_x0000_t202"
+ style='position:absolute;margin-left:275.6pt;margin-top:1.4pt;width:216.75pt;
+ height:96pt;z-index:6' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1089'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:6;margin-left:367px;margin-top:2px;width:293px;height:132px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=132 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:6'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1089" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>A CPU program can be
+    removed by clicking the <b>REMOVE PROGRAM</b> button shown in Fig. 7. Once
+    the program is removed it is no longer available and is lost. However you
+    can save it so that you can re-load it at a later time (see Fig. 12).<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:210.75pt;height:93pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image009.gif"
+  o:title="screen7"/>
+</v:shape><![endif]--><![if !vml]><img width=281 height=124
+src="Introduction%20to%20CPU%20Simulator_files/image009.gif" v:shapes="_x0000_i1031"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span style='font-family:Calibri'>Fig.
+7 – Program removal<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1090" type="#_x0000_t202"
+ style='position:absolute;margin-left:273.35pt;margin-top:5.1pt;width:216.75pt;
+ height:169.5pt;z-index:7' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1090'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:7;margin-left:364px;margin-top:7px;width:293px;height:230px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=230 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:7'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1090" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>A CPU program can run
+    in two different ways: 1) instruction by instruction, 2) automatically in
+    one go. To run a desired instruction by itself, first select it as in Fig.
+    5 and double-click it. Alternatively, you can click the <b>STEP</b> button
+    shown in Fig. 8 (make sure the <b>by inst.</b> option is selected). Use the
+    <b>STOP</b> button to stop the running program. Use the slider control to
+    speed up or slow down the running program.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><b style='mso-bidi-font-weight:normal'><span style='font-size:
+14.0pt;font-family:Calibri'>3. Running the program<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:120.75pt;height:119.25pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image010.gif"
+  o:title="screen8"/>
+</v:shape><![endif]--><![if !vml]><img width=161 height=159
+src="Introduction%20to%20CPU%20Simulator_files/image010.gif" v:shapes="_x0000_i1032"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>Fig. 8 – Program control<o:p></o:p></span></p>
+
+<span style='font-size:12.0pt;font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt;font-family:Calibri'>4. Observing and controlling the
+simulations<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1091" type="#_x0000_t202"
+ style='position:absolute;margin-left:279pt;margin-top:3.35pt;width:207.75pt;
+ height:198pt;z-index:8' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1091'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=372 height=4></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=281 height=268 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:8'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1091" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>An instruction which
+    writes or reads a register accesses the <b>REGISTER SET</b> frame and the
+    accessed register is highlighted. This frame shows the registers and their
+    values. Click on the <b>Val</b> (value) column to change the values from
+    decimal (<b>D</b>) to hex (<b>H</b>) format and vice versa.<o:p></o:p></span></p>
+    <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+    style='font-family:Calibri'>Note</span></b><span style='font-family:Calibri'>:
+    To manually alter a register’s value, first select it then enter the new
+    value in the <b style='mso-bidi-font-weight:normal'>Reg Value</b> field and
+    click on the <b style='mso-bidi-font-weight:normal'>CHANGE</b> button (not
+    shown in Fig. 9).<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Observing/altering the CPU registers:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1087" type="#_x0000_t75"
+ style='position:absolute;margin-left:0;margin-top:-.05pt;width:211.5pt;
+ height:90pt;z-index:4;mso-position-horizontal:left'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image011.gif"
+  o:title="screen9"/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=282 height=120
+src="Introduction%20to%20CPU%20Simulator_files/image011.gif" align=left
+hspace=12 v:shapes="_x0000_s1087"><![endif]><span style='font-family:Calibri'><br
+clear=all>
+<span style='mso-spacerun:yes'>              </span><span
+style='mso-spacerun:yes'>  </span>Fig. 9 – Register set view<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Observing/altering the program data:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:377.25pt;height:409.5pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image012.png"
+  o:title="screen10"/>
+</v:shape><![endif]--><![if !vml]><img width=503 height=546
+src="Introduction%20to%20CPU%20Simulator_files/image013.jpg" v:shapes="_x0000_i1033"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><span style='font-family:Calibri'>Fig.
+10 – Data memory page<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>The CPU instructions that
+access that part of the memory containing data can write or read the data
+accessed. This information is available in the memory pages window shown in
+Fig. 10 above. You can display this window by clicking the <b>SHOW PROGRAM DATA
+MEMORY…</b> button shown in Fig. 7 above. In this window you can also edit the
+contents of the data.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>The <b>LAdd</b> column
+shows the starting address of each line in the display. Each line of the
+display represents 8 bytes of information, so the <b>LAdd</b> numbers are
+incremented by 8 for each line down the display. Columns <b>B0</b> through to <b>B7</b>
+contain bytes 0 to 7. The <b>Data</b> column shows the displayable characters
+corresponding to the 8 bytes (hence 8 dots). Those bytes that correspond to
+non-displayable characters are shown as dots. The data bytes are displayed in
+hex format only.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>To change the values of
+any bytes, first select the line(s) containing the bytes. Then use the information
+in the <b>Initialize Data</b> frame to modify the values of the bytes in the
+selected line(s) as <b>Integer</b>, <b>Boolean</b> or <b>String</b> formats.
+You need to click the <b>UPDATE</b> button to make the change.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>Check the <b>Stay on top</b>
+check box to make sure the window always stays on top of other windows while
+still allowing access to the windows below it.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Observing/altering the program stack:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1093" type="#_x0000_t202"
+ style='position:absolute;margin-left:263.6pt;margin-top:1.45pt;width:216.75pt;
+ height:228.75pt;z-index:10' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1093'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:10;margin-left:351px;margin-top:2px;width:293px;height:309px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=309 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:10'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1093" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>Programs make use of
+    the <b>PROGRAM STACK</b> for temporarily storing important information such
+    as subroutine return addresses and subroutine parameters as well as other
+    relevant information. There are instructions that can push (<b>PSH</b>)
+    data on top of this stack and that can pop (<b>POP</b>) data from top of
+    the stack to a register.<o:p></o:p></span></p>
+    <p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+    <p class=MsoNormal><span style='font-family:Calibri'>You can manually push
+    and pop data by clicking the <b>PUSH</b> and <b>POP</b> buttons. You can
+    also modify a stack entry by selecting it, entering the new value in the
+    Value text box and clicking the <b>CHANGE</b> button.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:161.25pt;height:218.25pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image014.gif"
+  o:title="screen12"/>
+</v:shape><![endif]--><![if !vml]><img width=215 height=291
+src="Introduction%20to%20CPU%20Simulator_files/image014.gif" v:shapes="_x0000_i1034"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><span
+style='mso-spacerun:yes'>   </span>Fig. 11 – Program stack frame<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Saving and loading the CPU programs:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><!--[if gte vml 1]><v:shape id="_x0000_s1092"
+ type="#_x0000_t202" style='position:absolute;left:0;text-align:left;
+ margin-left:264.35pt;margin-top:-.15pt;width:216.75pt;height:68.25pt;
+ z-index:9' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1092'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:9;left:0px;margin-left:352px;margin-top:0px;width:293px;
+height:95px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=95 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;left:0pt;z-index:9'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1092" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>To save a program
+    select it from the pull down list and click the <b>SAVE…</b> button. To
+    load a saved program click the <b>LOAD…</b> button.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:124.5pt;height:76.5pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image015.gif"
+  o:title="screen11"/>
+</v:shape><![endif]--><![if !vml]><img width=166 height=102
+src="Introduction%20to%20CPU%20Simulator_files/image015.gif" v:shapes="_x0000_i1035"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>Fig. 12 – Saving and
+loading programs<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:12.0pt;font-family:Calibri;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";mso-ansi-language:EN-GB;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:Calibri'>Observing the displayed information:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1094" type="#_x0000_t202"
+ style='position:absolute;margin-left:265.1pt;margin-top:1.85pt;width:216.75pt;
+ height:138pt;z-index:11' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1094'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:11;margin-left:353px;margin-top:2px;width:293px;height:188px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=293 height=188 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:11'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1094" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>Programs are able to
+    display information on and accept data from the simulated console. The <b>OUT</b>
+    instruction is used to display information and the <b>IN</b> instruction is
+    used to accept input from the console. To show the console click the <b
+    style='mso-bidi-font-weight:normal'>INPUT/OUTPUT…</b> button shown in Fig.
+    13. The console window is shown in Fig. 14 below.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1036" type="#_x0000_t75" style='width:109.5pt;height:118.5pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image016.gif"
+  o:title="screen13"/>
+</v:shape><![endif]--><![if !vml]><img width=146 height=158
+src="Introduction%20to%20CPU%20Simulator_files/image016.gif" v:shapes="_x0000_i1036"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>Fig. 13 – Console button<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:134.25pt'><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:134.25pt'><span style='font-family:Calibri'><span
+style='mso-tab-count:1'>                                             </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1037" type="#_x0000_t75" style='width:467.25pt;height:319.5pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image017.png"
+  o:title="screen14"/>
+</v:shape><![endif]--><![if !vml]><img width=623 height=426
+src="Introduction%20to%20CPU%20Simulator_files/image018.jpg" v:shapes="_x0000_i1037"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:Calibri'>Fig. 14 – Console window<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'>Check the <b>Stay on top</b>
+check box to make sure the window always stays on top of other windows while
+still allowing access to the windows below it. Click on the <b
+style='mso-bidi-font-weight:normal'>SHOW KEYBD…</b> to show a small virtual
+keyboard used to input data (see Fig. 15 below).<o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1095" type="#_x0000_t202"
+ style='position:absolute;margin-left:268.1pt;margin-top:13.9pt;width:216.75pt;
+ height:96pt;z-index:12' fillcolor="#cff" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1095'/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=357 height=19></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=293 height=132 bgcolor="#CCFFFF" style='vertical-align:top;
+  background:#CCFFFF'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;z-index:12'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1095" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:Calibri'>Check the <b
+    style='mso-bidi-font-weight:normal'>Lower Case</b> check box to input lower
+    case characters. This keyboard is a subset of a standard keyboard. You can
+    also supply input to a program by typing in the <b style='mso-bidi-font-weight:
+    normal'>INPUT</b> text box shown in Fig. 14 above.<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><span style='font-family:Calibri'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1038" type="#_x0000_t75" style='width:222pt;height:113.25pt'>
+ <v:imagedata src="Introduction%20to%20CPU%20Simulator_files/image019.png"
+  o:title="screen15"/>
+</v:shape><![endif]--><![if !vml]><img width=296 height=151
+src="Introduction%20to%20CPU%20Simulator_files/image020.jpg" v:shapes="_x0000_i1038"><![endif]><span
+style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:Calibri'><span
+style='mso-spacerun:yes'>                  </span>Fig. 15 – Virtual keyboard<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

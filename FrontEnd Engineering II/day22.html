@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+function func1(){
+return new Promise(function(resolve,reject) {
+setTimeout(() => {
+const error = false;
+if (!error) {
+document.write("Function: has succesfully worked")
+resolve();
+}
+else{
+document.write("Function: has rejected")
+reject('sorry Not Worked');
+}
+},2000);
+})
+}
+func1().then(function(){
+document.write("Promise! Thanks for HElp")
+}).catch(function(error){
+document.write("Preenu! Try Again " + error)
+})
+</script>
+<body></body>
+</html>

@@ -1,0 +1,68 @@
+<!-- <html>
+<head>
+<title>Nested functions</title>
+</head>
+<body><script>
+// outer function
+function greet(name) {
+    // inner function
+    function displayName() {
+        console.log('Hi' + ' ' + name);
+    }
+    // calling inner function
+    displayName();
+}
+// calling outer function
+greet('Javascript'); 
+</script></body></html> -->
+<!-- <html>
+<head>
+<title>Nested functions</title>
+</head>
+<body>
+<script>
+function greet(name) {
+    function displayName() {
+        console.log('Hi' + ' ' + name);
+    }
+    // returning a function
+    return displayName;
+}
+const g1 = greet('Javascript');
+console.log(g1); // returns the function definition
+g1(); // calling the function
+</script>
+</body></html> -->
+<!-- <html>
+<head>
+<title>Nested functions</title>
+</head>
+<body><script>
+function outerfun()
+{
+var j="hello im part of outer function";
+document.write(j+"<br>");
+function innerfun()
+{
+var k="im part of inner function";
+document.write(k+"<br>");
+//document.write(j+"<br>");
+}
+innerfun()
+document.write(k+"<br>");
+}
+outerfun();
+</script></body></html> -->
+<html><head><title>Nested functions</title></head>
+<body><script>
+const outerfun = (a) => {
+let j=10;
+const innerfun = () => 
+{
+var k=a+j;
+document.write(`the sum of two no is ${k}.`);
+}
+innerfun()
+}
+outerfun(5);
+</script></body></html>

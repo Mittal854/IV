@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Dropdown-List</title>
+			<style>
+				#dropdown
+				{
+					display:inline-block;
+					position:relative;
+				}
+				#dropdown span
+				{
+					background-color:red;
+					color:white;
+					padding:8px;
+				}
+				
+				#dp-content
+				{
+					display:none;
+					position:absolute;
+					height:200px;
+					width:200px;
+					border:2px solid transparent;
+					box-shadow:5px 5px 5px grey;
+				
+				}
+
+				#dropdown:hover #dp-content
+				{
+				display:block;
+					}
+					
+				#ol
+				{
+					list-style-type:decimal-leading-zero;
+					list-style-position:outside;
+				}
+				
+				#ol li 
+				{
+				padding:8px;
+				}
+				
+				#ol li:hover
+				{
+					background-color:black;
+					color:white;
+				}
+								
+
+			</style>
+	</head>
+		<body>
+			<div id ="dropdown">
+				<span>Services</span>
+					<div id="dp-content">
+						<ol id="ol">
+							<li>Cloud Computing</li>
+							<li>Online Support</li>
+							<li>Shipping</li>
+							<li>Tutorial</li>
+						</ol>
+					</div>
+			</div>
+
+		</body>
+</html>

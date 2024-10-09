@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSizzle</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> -->
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-612dd696ed96d6777d290343ca9cef9d.css?vsn=d" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="search.js"></script>
+  </head>
+  <section id="header">
+    <a href="index.html"
+      ><img
+        src="img/shop sizzle-logos (1)/shop sizzle-logos_white.png"
+        class="logo" />ShopSizzle</a
+    >
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+        </li>
+        <li>
+          <a href="signin.html"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li id="searchContainer">
+          <form id="searchForm" autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit" id="searchButton">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <div id="searchResults" class="hidden"></div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="page-header" class="contact-header">
+    <h2>#Discover Our Story</h2>
+  </section>
+  <section id="about-head" class="section-p1">
+    <img src="img/banner19.png" />
+
+    <div>
+      <h2>Who We Are?</h2>
+      <p>
+        At Shop Sizzle, we are more than just an online marketplace – we're a
+        community driven by passion and innovation. Founded with the vision to
+        redefine the online shopping experience, we pride ourselves on offering
+        a diverse range of products that cater to every lifestyle and need. Our
+        team is dedicated to curating the finest selection, ensuring that each
+        item meets our stringent standards of quality and reliability. With a
+        commitment to excellence and customer satisfaction at our core, we
+        strive to foster meaningful connections with our valued customers,
+        creating a shopping journey that is as enriching as it is seamless. Join
+        us as we continue to evolve and inspire, shaping the future of online
+        retail one experience at a time.
+      </p>
+    </div>
+  </section>
+  <section id="about-app" class="section-p1">
+    <h1>Download Our App</h1>
+    <div class="video">
+      <video autoplay muted loop src="img/video4.mp4"></video>
+    </div>
+  </section>
+  <section id="videos" class="section-p1">
+    <h2>Our Services</h2>
+    <div id="video-container">
+      <div class="video-box">
+        <video autoplay loop muted>
+          <source src="img/video2.mp4" type="video/mp4" />
+        </video>
+        <h6>PERSONALIZATION</h6>
+        <p>
+          Emboss select bags, luggage, belts, leather accessories, and items
+          from the pet's collection with initials to create a truly unique
+          piece.
+        </p>
+      </div>
+      <div class="video-box">
+        <video autoplay loop muted>
+          <source src="img/video1.mp4" type="video/mp4" />
+        </video>
+        <h6>PACKAGING</h6>
+        <p>
+          Choose our online exclusive tote or add a gift message at checkout to
+          enjoy the boutique shopping bag.
+        </p>
+      </div>
+      <div class="video-box">
+        <video autoplay loop muted>
+          <source src="img/video3.mp4" type="video/mp4" />
+        </video>
+        <h6>COLLECT IN STORE</h6>
+        <p>
+          Order online and collect your order from your preferred ShopSizzle
+          boutique.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>
+        Get E-mail updates about our latest shop and
+        <span>special offers.</span>
+      </p>
+    </div>
+    <div class="form">
+      <input type="email" placeholder="Your email address" />
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+  <footer class="footer1">
+    <div class="footerLeft">
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">About Us</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Company
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Contact
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Careers
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Affiliates
+          </li>
+          <li class="fListItem" onclick="window.location.href='about.html'">
+            Stores
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">My Account</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='signin.html'">
+            Sign In
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            View Cart
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            My Wishlist
+          </li>
+          <li class="fListItem" onclick="window.location.href='cart.html'">
+            Track My Order
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Help
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Useful Links</h1>
+        <ul class="fList">
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Support
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Refund
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            FAQ
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Feedback
+          </li>
+          <li class="fListItem" onclick="window.location.href='contact.html'">
+            Stories
+          </li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Products</h1>
+        <ul class="fList">
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweatshirts'">
+            Sweatshirts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#jackets'">
+            Zipper Jackets
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop.html#sweaters'">
+            Sweaters
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#suits'">
+            Suits
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop2.html#blazers'">
+            Blazers
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#shorts'">
+            Shorts
+          </li>
+          <li
+            class="fListItem"
+            onclick="window.location.href='shop3.html#tshirts'">
+            Tshirts
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerRight">
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Follow Us</h1>
+        <div class="ficons">
+          <i class="fa-brands fa-facebook-f ficon"></i>
+          <i class="fa-brands fa-instagram ficon"></i>
+          <i class="fa-brands fa-x-twitter ficon"></i>
+          <i class="fa-brands fa-youtube ficon"></i>
+          <i class="fa-brands fa-whatsapp ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Contact Us</h1>
+        <div class="ficons">
+          <i class="fa-duotone fa-phone ficon"></i>
+          <i class="fa-sharp fa-solid fa-envelope ficon"></i>
+          <i class="fa-sharp fa-solid fa-location-dot ficon"></i>
+        </div>
+      </div>
+      <div class="footerRightMenu">
+        <span class="copyright">
+          <span>©</span>
+          <span>2024 Shop Sizzle India Marketing Pvt. Ltd</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</html>

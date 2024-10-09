@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      //       // ES5
+      //       var name = "javascript";
+      //       var res = "welcome to \n " + name;
+      //       console.log(res);
+
+      //       //ES6
+      //       var name = "javascript";
+      //       var res = `welcome
+      // to
+      // ${name}`;
+      //       console.log(res);
+
+      //ES5
+      const details = {
+        name: "David",
+        age: 67,
+        course: "javascript",
+      };
+      var name = details.name;
+      var age = details.age;
+      var course = details.course;
+      console.log(name);
+      console.log(age);
+      console.log(course);
+
+      //ES6
+
+      const details1 = {
+        name: "David",
+        age: 67,
+        course: "javascript",
+      };
+      var { name, age, course } = details1;
+
+      console.log(name);
+      console.log(age);
+      console.log(course);
+
+      //array
+
+      const arr = ["abc", "xyz", "mno"];
+      let [a, b, c] = arr;
+      console.log(a);
+      console.log(b);
+      console.log(c);
+    </script>
+  </body>
+</html>
